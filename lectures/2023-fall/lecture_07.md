@@ -238,3 +238,7 @@ public class Example {
 
 Затем мы используем метод _orElse_, чтобы вернуть объект _Integer_ если _Optional_ содержит значение или вернуть новый 
 объект Integer с значением 42 если Optional пуст. В конце мы выводим результат на консоль.
+
+# Полезные ссылки
+
+[Статья про дженерики](https://skillbox.ru/media/base/dzheneriki-v-java-dlya-samykh-malenkikh/)
