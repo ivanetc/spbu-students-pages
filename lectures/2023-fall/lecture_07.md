@@ -98,10 +98,10 @@ class BoxInt extends Box<Integer> {
 
 Примеры классов-обёрток:
 
-Integer — обёртка для типа int
-Double — обёртка для типа double
-Boolean — обёртка для типа boolean
-Character — обёртка для тип char
+- Integer — обёртка для типа int
+- Double — обёртка для типа double
+- Boolean — обёртка для типа boolean
+- Character — обёртка для тип char
 
 Эти классы предоставляют дополнительные методы и возможности, которые недоступны для примитивных типов.
 
