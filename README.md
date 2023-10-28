@@ -8,6 +8,7 @@
 * [Лекция 5. Основы ООП. Абстрактный класс. Анонимный класс. Принципы SOLID](/lectures/2023-fall/lecture_05.html)
 * [Лекция 6. Класс Object. Класс String. Регулярные выражения.](/lectures/2023-fall/lecture_06.html)
 * [Лекция 7. Generics. Классы-обертки над примитивными типами. Optional.](/lectures/2023-fall/lecture_07.html)
+* [Лекция 8. Collections. Lambda-выражения. Stream](/lectures/2023-fall/lecture_07.html)
 
 ### Условия домашек
 * [Домашка 3. Комплексные числа](/lectures/2023-fall/task_03.html)
@@ -15,6 +16,7 @@
 * [Домашка 5. Список основанный на массиве. Странный список](/lectures/2023-fall/task_05.html)
 * [Домашка 6. Регулярные выражения. Работа со строками](/lectures/2023-fall/task_06.html)
 * [Домашка 7. Generics](/lectures/2023-fall/task_07.html)
+* [Домашка 8. Collections. Stream](/lectures/2023-fall/task_08.html)
 
 
 ## Прошедшие семестры

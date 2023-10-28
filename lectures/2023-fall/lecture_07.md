@@ -89,8 +89,71 @@ class Box<T> {
 class BoxInt extends Box<Integer> {
     BoxInt(Integer value) { super(value); }
 }
-
 ```
+
+### Про Generics после компиляции.
+
+Компилятор не генерирует class-файл для каждого параметризованного типа.
+Он создаёт один class-файл для дженерик-типа. В Java в скомпилированном байт-коде нет никакой информации о типе параметра.
+Один байт-код для всех типов параметра.
+
+Компилятор стирает информацию о типе, заменяя все параметры без ограничений (unbounded)
+типом Object, а параметры с границами (bounded) — на эти границы.
+Это называется type erasure
+
+
+```java
+class Box<T> {
+    private T item;
+
+    public void putItem(T item) {
+        this.item = item;
+    }
+
+    public T getItem() {
+        return item;
+    }
+    
+    public T toArray(T[] arr) {
+    }
+}
+
+public class Temp {
+    public static void main(String[] args) {
+        Box<String> box = new Box<>();
+        box.putItem("");
+    }
+}
+```
+
+Такой наш класс после компиляции превратится в следующий:
+
+```java
+class Box {
+    private Object item;
+
+    public void putItem(Object item) {
+        this.item = item;
+    }
+
+    public Object getItem() {
+        return item;
+    }
+}
+
+class Temp {
+    public static void main(String[] args) {
+        Box box = new Box();
+        box.putItem((Object) "");
+        String str = (String) box;
+    }
+}
+```
+
+Поэтому в домашке про generics в методе `toArray` не получится создать `new T[]()` -
+потому что в runtime java просто не будет ничего знать о типе T
+
+Подробнее можно прочитать в [этой статье](https://skillbox.ru/media/code/dzheneriki-v-java-dlya-tekh-kto-postarshe/#stk-1)
 
 ## Классы-обертки над примитивными типами <a name="primitives"></a> 
 Классы-обёртки в Java используются для того, чтобы представлять примитивные типы данных (например, int, double, boolean) 
