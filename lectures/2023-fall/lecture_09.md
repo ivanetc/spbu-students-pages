@@ -528,3 +528,8 @@ public class Car {
     }  
 }
 ```
+
+### Полезные ссылки
+
+[Статья про потоки ввода и вывода](https://metanit.com/java/tutorial/6.1.php)
+[Статья про BufferedReader и BufferedWriter](https://metanit.com/java/tutorial/6.9.php)
