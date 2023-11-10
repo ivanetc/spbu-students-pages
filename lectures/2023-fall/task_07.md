@@ -27,7 +27,7 @@
     Для того, чтобы создать generic массив воспользуйтесь функцией:
 
 ```java
-T[] array = (E[]) Array.newInstance(array.getClass(), sizeOfList);
+T[] array = (T[]) Array.newInstance(array.getClass(), sizeOfList);
 ```
 
 ### Generics. Доп. домашка. AVL tree
