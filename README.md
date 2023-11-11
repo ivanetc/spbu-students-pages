@@ -9,6 +9,7 @@
 * [Лекция 6. Класс Object. Класс String. Регулярные выражения.](/lectures/2023-fall/lecture_06.html)
 * [Лекция 7. Generics. Классы-обертки над примитивными типами. Optional.](/lectures/2023-fall/lecture_07.html)
 * [Лекция 8. Collections. Lambda-выражения. Stream](/lectures/2023-fall/lecture_08.html)
+* [Лекция 9. Исключения. Работа с файлами](/lectures/2023-fall/lecture_09.html)
 
 ### Условия домашек
 * [Домашка 3. Комплексные числа](/lectures/2023-fall/task_03.html)
