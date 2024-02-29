@@ -1,7 +1,7 @@
 remote_theme: pages-themes/cayman@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
-title: "Технологии программирования СПбГУ"
+title: "Иванец А.С."
 description: Сайт для студентов дисциплины "Технологии программирования" в СПбГУ, <br/> программа "Прикладная информатика в области искусств и гуманитарных наук"
 show_downloads: false
 
