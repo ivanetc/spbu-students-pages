@@ -207,3 +207,4 @@ https://struchkov.dev/blog/ru/jwt-implementation-in-spring/
 ## Как реализовать аутентификацию в Spring?
 
 [Документация по Spring Security](https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/basic.html)
+[Пошаговая инструкция (почти рабочая)](https://springjava.com/spring-boot/spring-security-basic-authentication-spring-boot/)
