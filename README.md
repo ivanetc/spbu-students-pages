@@ -3,6 +3,7 @@
 
 ### Весенний семестр. Основы разработки серверных компонент
 * [Лекция 1. Сборка программы на java. Системы сборок. Клиент-серверная архитектура](/lectures/2024-spring/lecture_01.html)
+* [Лекция 10. Filters and Interceptors. Spring Security. Authentication and authorization](/lectures/2024-spring/lecture_10.html)
 
 ### Осенний семестр. Основы java
 * [Лекция 1. Вводная о курсе. Git. Основы Java. Codestyle](/lectures/2023-fall/lecture_01.html)
