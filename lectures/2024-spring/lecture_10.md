@@ -206,14 +206,160 @@ https://struchkov.dev/blog/ru/jwt-implementation-in-spring/
 
 ## Как реализовать аутентификацию в Spring?
 
+#### SecurityFilterChain
+
+В контексте Spring Security, **SecurityFilterChain** играет ключевую роль в обеспечении безопасности веб-приложений. 
+Он позволяет разработчикам контролировать, какие пользователи могут получить доступ к определенным ресурсам приложения, 
+а также обеспечивает защиту от несанкционированного доступа и атак.
+
+**SecurityFilterChain** в Spring Security - это набор фильтров безопасности, которые обрабатывают входящие запросы и 
+определяют, должен ли запрос быть авторизован или нет. Этот механизм позволяет гибко настраивать правила аутентификации 
+и авторизации для различных типов запросов, а также обеспечивает возможность расширения и кастомизации процесса 
+аутентификации и авторизации.
+
 ![](https://docs.spring.io/spring-security/reference/_images/servlet/architecture/securityfilterchain.png)
 
-___
+
+**SecurityFilterChain** реализуется через класс SecurityFilterChain, который является частью Spring Security. Этот класс 
+позволяет разработчикам создавать и настраивать цепочки фильтров безопасности, определяя порядок их выполнения и 
+условия, при которых каждый фильтр должен быть применен.
+
+#### BasicAuthenticationFilter
+
+**BasicAuthenticationFilter** в Spring Security - это один из основных фильтров, используемых для реализации базовой аутентификации HTTP. Он отвечает за обработку запросов, содержащих заголовок Authorization с типом Basic, который содержит закодированные имя пользователя и пароль.
+Устройство **BasicAuthenticationFilter** включает в себя следующие ключевые компоненты:
+
+1. **Анализ заголовка _Authorization_**: Фильтр проверяет наличие заголовка _Authorization_ в запросе и определяет его тип 
+(Basic). Если тип не соответствует ожидаемому, фильтр пропускает запрос без дальнейшей обработки.
+2. **Декодирование учетных данных**: Если тип заголовка _Authorization_ соответствует ожидаемому, фильтр декодирует 
+содержимое заголовка, используя алгоритм _Base64_. Полученная строка разделяется на имя пользователя и пароль.
+3. **Проверка учетных данных**: Фильтр проверяет полученные учетные данные, сравнивая их с сохраненными в системе. 
+Если учетные данные совпадают, фильтр устанавливает контекст безопасности и пропускает запрос дальше по цепочке 
+фильтров. В противном случае, фильтр генерирует исключение _AuthenticationException_, которое указывает на неудачную 
+попытку аутентификации.
+4. **Обработка исключений**: В случае неудачной аутентификации, фильтр может вернуть различные коды ошибок в зависимости от настроек системы. Например, если учетные данные не найдены, может быть возвращен код ошибки 401 (Unauthorized).
+**BasicAuthenticationFilter** является ключевым компонентом в процессе аутентификации в Spring Security. Он обеспечивает базовую поддержку для аутентификации пользователей, передающих свои учетные данные через заголовок Authorization в запросах.
+
+![](https://docs.spring.io/spring-security/reference/_images/servlet/authentication/unpwd/basicauthenticationfilter.png)
+
+### Как реализовать простую basic-аутентификацию?
+
+Заведем класс SecurityConfig для конфигурации. 
+
+```java
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+    // здесь будет код конфига
+}
+```
+
+Аннотация `@Configuration` в Spring используется для обозначения класса как источника бинов (bean-компонентов) для 
+контекста приложения. Класс, помеченный этой аннотацией, становится конфигурационным классом, который может определять 
+бины и их зависимости.
+
+Аннотация `@EnableWebSecurity` применяется к классу конфигурации, чтобы включить поддержку веб-безопасности в 
+приложении. Она активирует базовые настройки безопасности, такие как аутентификация и авторизация, предоставляемые 
+`Spring Security`. Эта аннотация автоматически регистрирует необходимые фильтры безопасности и конфигурацию 
+безопасности, позволяя разработчику сосредоточиться на специфической настройке безопасности приложения.
+
+Использование этих аннотаций вместе позволяет легко интегрировать `Spring Security` в ваше приложение и настроить 
+его под конкретные требования безопасности.
+
+Далее реализуем функцию создающую Bean UserDetailsService:
+
+```java
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+    @Bean
+    public static PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService() {
+        UserDetails admin = User.builder()
+                .username("admin")
+                .password(passwordEncoder().encode("admin"))
+                .roles("ADMIN")
+                .build();
+        return new InMemoryUserDetailsManager(admin);
+    }
+}
+```
+
+**UserDetailsService** в _Spring Security_ - это интерфейс, который предоставляет метод `loadUserByUsername(String username)` 
+для поиска пользователя по имени пользователя. Этот интерфейс используется для загрузки пользовательских данных из 
+любого источника, например, базы данных или LDAP. Реализация этого интерфейса позволяет _Spring Security_ получать 
+информацию о пользователе, необходимую для аутентификации и авторизации.
+
+**UserDetails** - это класс, который описывает пользовательские данные. Он содержит информацию о пользователе, такую как 
+имя пользователя, пароль, роли и другие атрибуты, которые могут потребоваться для аутентификации и авторизации. 
+Класс `UserDetails` реализует интерфейс `Serializable`, что позволяет сериализовать объекты этого класса.
+
+Spring Security использует `UserDetailsService` для получения объекта `UserDetails` для конкретного пользователя. После 
+получения объекта `UserDetails` Spring Security может выполнить аутентификацию и авторизацию пользователя, используя его данные.
+
+**InMemoryUserDetailsManager** в Spring Security - это реализация интерфейса UserDetailsService, которая хранит информацию 
+о пользователях в памяти. Это означает, что все пользовательские данные, включая пароли и роли, хранятся в оперативной 
+памяти приложения.
+
+InMemoryUserDetailsManager используется для тестирования и разработки, когда требуется быстро настроить систему 
+аутентификации без необходимости подключения к базе данных. Он позволяет легко добавлять, удалять и изменять 
+пользователей прямо в коде, что делает его идеальным инструментом для быстрой настройки безопасности приложения.
+
+Далее настроим непосредственно SecurityFilterChain: 
+
+```java
+@Configuration
+@EnableWebSecurity
+public class SecurityConfig {
+
+    @Bean
+    public static PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Bean
+    public UserDetailsService userDetailsService() {
+        UserDetails admin = User.builder()
+                .username("admin")
+                .password(passwordEncoder().encode("admin"))
+                .roles("ADMIN")
+                .build();
+        return new InMemoryUserDetailsManager(admin);
+    }
+
+    @Bean
+    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+        http.csrf(AbstractHttpConfigurer::disable)
+                .authorizeHttpRequests(authorize ->
+                        authorize.requestMatchers(HttpMethod.GET, "api/general/**").permitAll())
+                .authorizeHttpRequests(authorize ->
+                        authorize.requestMatchers(HttpMethod.GET, "api/secret/**").authenticated())
+                .httpBasic(Customizer.withDefaults());
+
+        return http.build();
+    }
+}
+```
+
+Метод `securityFilterChain` позволяет настроить _HttpSecurity_, который управляет конфигурацией безопасности HTTP. 
+Мы используем метод authorizeRequests для указания, что все запросы должны быть аутентифицированы, и метод `httpBasic` 
+для включения базовой аутентификации.
+
+Метод `requestMatchers` в Spring Security используется для определения URL-адресов и методов HTTP, для которых будет 
+применяться конфигурация безопасности. Этот метод позволяет точно настроить, какие запросы будут обрабатываться 
+определенным образом, например, требовать аутентификацию или авторизацию.
+
+В этом примере мы используем метод `requestMatchers` для указания, что запросы, соответствующие шаблону `api/secret/**` 
+и методу `HTTP GET`, должны быть авторизованы.
 
 ![](https://docs.spring.io/spring-security/reference/_images/servlet/authentication/unpwd/basicauthenticationentrypoint.png)
 
-___
-![](https://docs.spring.io/spring-security/reference/_images/servlet/authentication/unpwd/basicauthenticationfilter.png)
 
 [Документация по Spring Security](https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/basic.html)
+
 [Пошаговая инструкция (почти рабочая)](https://springjava.com/spring-boot/spring-security-basic-authentication-spring-boot/)
