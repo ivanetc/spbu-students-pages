@@ -1,10 +1,6 @@
 # Технологии программирования
 ## Заметки с лекций
 
-### Весенний семестр. Основы разработки серверных компонент
-* [Лекция 1. Сборка программы на java. Системы сборок. Клиент-серверная архитектура](/lectures/2024-spring/lecture_01.html)
-* [Лекция 10. Filters and Interceptors. Spring Security. Authentication and authorization](/lectures/2024-spring/lecture_10.html)
-
 ### Осенний семестр. Основы java
 * [Лекция 1. Вводная о курсе. Git. Основы Java. Codestyle](/lectures/2023-fall/lecture_01.html)
 * [Лекция 2. Базовый синтаксис Java. Тестирование своей программы](/lectures/2023-fall/lecture_02.html)
@@ -15,6 +11,11 @@
 * [Лекция 7. Generics. Классы-обертки над примитивными типами. Optional.](/lectures/2023-fall/lecture_07.html)
 * [Лекция 8. Collections. Lambda-выражения. Stream](/lectures/2023-fall/lecture_08.html)
 * [Лекция 9. Исключения. Работа с файлами](/lectures/2023-fall/lecture_09.html)
+
+### Весенний семестр. Основы разработки серверных компонент
+* [Лекция 1. Сборка программы на java. Системы сборок. Клиент-серверная архитектура](/lectures/2024-spring/lecture_01.html)
+* [Лекция 2. Docker. Переменные окружения](/lectures/2024-spring/lecture_02.html)
+* [Лекция 10. Filters and Interceptors. Spring Security. Authentication and authorization](/lectures/2024-spring/lecture_10.html)
 
 ### Условия домашек (осень)
 * [Домашка 3. Комплексные числа](/lectures/2023-fall/task_03.html)
