@@ -15,6 +15,7 @@
 ### Весенний семестр. Основы разработки серверных компонент
 * [Лекция 1. Сборка программы на java. Системы сборок. Клиент-серверная архитектура](/lectures/2024-spring/lecture_01.html)
 * [Лекция 2. Docker. Переменные окружения](/lectures/2024-spring/lecture_02.html)
+* [Лекция 3. Работа с БД](/lectures/2024-spring/lecture_03.html)
 * [Лекция 10. Filters and Interceptors. Spring Security. Authentication and authorization](/lectures/2024-spring/lecture_10.html)
 
 ### Условия домашек (осень)
