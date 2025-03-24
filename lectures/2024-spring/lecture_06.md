@@ -394,9 +394,11 @@ class Temp {
 
 ### Полезные ссылки
 
-https://habr.com/ru/company/piter/blog/676394/
-https://habr.com/ru/post/438870/
-https://medium.com/nuances-of-programming/lombock-хорошее-и-плохое-применение-4bd9cfdc5dd5
+[Статья Lombok. Полное руководство](https://habr.com/ru/company/piter/blog/676394/)
+
+[Статья Lombok возвращает величие Java](https://habr.com/ru/post/438870/)
+
+[Статья Lombok: хорошее и плохое применение](https://medium.com/nuances-of-programming/lombock-хорошее-и-плохое-применение-4bd9cfdc5dd5)
 
 ## Record
 
