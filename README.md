@@ -16,6 +16,7 @@
 * [Лекция 1. Сборка программы на java. Системы сборок. Клиент-серверная архитектура](/lectures/2024-spring/lecture_01.html)
 * [Лекция 2. Docker. Переменные окружения](/lectures/2024-spring/lecture_02.html)
 * [Лекция 3. Базы данных. Реляционные базы данных. SQL. Работа с sql-базами данных из приложений на java](/lectures/2024-spring/lecture_03.html)
+* [Лекция 6. Аннотации и аспектно-ориентированное программирование. Lombok. Record. Работа с JSON.](/lectures/2024-spring/lecture_06.html)
 * [Лекция 10. Filters and Interceptors. Spring Security. Authentication and authorization](/lectures/2024-spring/lecture_10.html)
 
 ### Условия домашек (осень)
