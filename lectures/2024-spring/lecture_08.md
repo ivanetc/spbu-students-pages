@@ -160,6 +160,62 @@ public class ProductDao {
 - Имеет ограничения в кэшировании изменяемых данных
 - Может создавать более тяжелый код по сравнению с “чистым” SQL
 
+Для работы с Hibernate в проекте на Gradle вам потребуются следующие основные зависимости:
+
+- Hibernate Core - основная библиотека Hibernate
+- Hibernate Entity Manager - для поддержки JPA
+- Hibernate Validator - для валидации бинов (опционально)
+- JDBC Драйвер - для подключения к базе данных
+
+Вот пример конфигурации build.gradle:
+
+```gradle
+dependencies {
+    // Hibernate Core
+    implementation 'org.hibernate:hibernate-core:5.5.7.Final'
+    
+    // Hibernate Entity Manager
+    implementation 'org.hibernate:hibernate-entitymanager:5.5.7.Final'
+    
+    // Hibernate Validator (опционально)
+    implementation 'org.hibernate:hibernate-validator:6.2.0.Final'
+    
+    // PostgreSQL JDBC драйвер
+    implementation 'org.postgresql:postgresql:42.3.8'
+}
+```
+
+Пример конфигурации в файле `application.yml` в каталоге `src/main/resources`:
+
+```
+# Конфигурация базы данных
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/your_database
+    username: your_username
+    password: your_password
+    driver-class-name: org.postgresql.Driver
+    
+  # Hibernate настройки
+  jpa:
+    hibernate:
+      # Диалект для PostgreSQL
+      dialect: org.hibernate.dialect.PostgreSQLDialect
+      # Создание и обновление схемы БД
+      ddl-auto: update
+      # Вывод SQL в консоль
+      show-sql: true
+      
+    # Дополнительные настройки
+    properties:
+      hibernate:
+        # Управление сессией
+        current_session_context_class: thread
+        # Оптимизация
+        format_sql: true
+```
+
+
 ## Jooq (Java Object Oriented Querying)
 
 Что это?
@@ -192,6 +248,114 @@ public class AuthorService {
     }
 }
 ```
+
+Вот пример конфигурации build.gradle:
+```groovy
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm' version '1.8.21'
+    id 'org.jooq.gradle' version '5.3.2'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // JOOQ
+    implementation 'org.jooq:jooq:3.19.3'
+    implementation 'org.jooq:jooq-meta:3.19.3'
+    implementation 'org.jooq:jooq-codegen:3.19.3'
+    
+    // PostgreSQL driver
+    implementation 'org.postgresql:postgresql:42.5.4'
+    
+    // Kotlin (если используете)
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+}
+
+jooq {
+    version = '3.19.3'
+    edition = 'OSS'
+    
+    configurations {
+        main {
+            jdbc {
+                driver = 'org.postgresql.Driver'
+                url = 'jdbc:postgresql://localhost:5432/your_database'
+                user = 'your_username'
+                password = 'your_password'
+            }
+            generator {
+                name = 'org.jooq.codegen.DefaultGenerator'
+                database {
+                    name = 'org.jooq.meta.postgres.PostgreSQLDatabase'
+                    inputSchema = 'public'
+                    includes = '.*'
+                    excludes = ''
+                }
+                generate {
+                    relations = true
+                    deprecated = false
+                    records = true
+                    pojos = true
+                    immutablePojos = false
+                    fluentSetters = true
+                }
+                target {
+                    packageName = 'com.example.generated'
+                    directory = 'src/main/java'
+                }
+            }
+        }
+    }
+}
+```
+
+Пример конфигурации в файле `application.yml` в каталоге `src/main/resources`:
+
+```yaml
+# JOOQ Configuration
+jooq:
+  sql-dialect: POSTGRES
+  
+  # Database connection properties
+  datasource:
+    url: jdbc:postgresql://localhost:5432/your_database
+    username: your_username
+    password: your_password
+    driver-class-name: org.postgresql.Driver
+    
+  # Configuration for generated classes
+  config:
+    record-pojo-impl: true
+    
+  # Database schema
+  database:
+    input-schema: public
+    
+# Spring configuration
+spring:
+  datasource:
+    initialization-mode: always
+    
+  # Hibernate (если используется вместе с JOOQ)
+  jpa:
+    hibernate:
+      ddl-auto: none
+    properties:
+      hibernate:
+        default_schema: public
+
+# Logging
+logging:
+  level:
+    org:
+      jooq:
+        SQL: DEBUG
+
+```
+
 ## Сравнение Hibernate и Jooq
 
 ![](../../resources/lectures/2025-spring/jpa.png)
