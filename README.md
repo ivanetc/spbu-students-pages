@@ -20,6 +20,7 @@
 * [Лекция 8. Spring Framework](/lectures/2024-spring/lecture_07.html)
 * [Лекция 9. Spring JPA. Hibernate. Jooq](/lectures/2024-spring/lecture_08.html)
 * [Лекция 10. Filters and Interceptors. Spring Security. Authentication and authorization](/lectures/2024-spring/lecture_10.html)
+* [Лекция 11. Thymeleaf. Jsp](/lectures/2024-spring/lecture_11.html)
 
 ### Условия домашек (осень)
 * [Домашка 3. Комплексные числа](/lectures/2023-fall/task_03.html)
