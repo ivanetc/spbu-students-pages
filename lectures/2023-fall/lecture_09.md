@@ -98,6 +98,21 @@ public static void main(String[] args) {
 }
 ```
 
+Try-with-resources:
+
+```java
+Path path = Path.of("data.txt");
+try (BufferedReader br = Files.newBufferedReader(path, StandardCharsets.UTF_8)) {
+    String line;
+    while ((line = br.readLine()) != null) {
+        System.out.println(line);
+    }
+} catch (IOException e) {
+    // добавляйте контекст и cause
+    throw new IOException("Cannot read file: " + path.toAbsolutePath(), e);
+}
+```
+
 ###  Работа с файлами и каталогами
 Работа с файлами и каталогами в Java осуществляется с помощью классов из пакета `java.io`.
 Класс File из модуля java.nio.file используется для работы с файлами и директориями в Java. 
