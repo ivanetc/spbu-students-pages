@@ -11,6 +11,8 @@
 * [Лекция 7. Generics. Классы-обертки над примитивными типами. Optional.](/lectures/2023-fall/lecture_07.html)
 * [Лекция 8. Collections. Lambda-выражения. Stream](/lectures/2023-fall/lecture_08.html)
 * [Лекция 9. Исключения. Работа с файлами](/lectures/2023-fall/lecture_09.html)
+* [Лекция 10. Компиляция Java-программы, устройство памяти JVM и Garbage Collector](/lectures/2023-fall/lecture_10.html)
+
 
 ### Весенний семестр. Основы разработки серверных компонент
 * [Лекция 1. Сборка программы на java. Системы сборок. Клиент-серверная архитектура](/lectures/2024-spring/lecture_01.html)
