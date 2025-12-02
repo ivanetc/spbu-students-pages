@@ -12,6 +12,7 @@
 * [Лекция 8. Collections. Lambda-выражения. Stream](/lectures/2023-fall/lecture_08.html)
 * [Лекция 9. Исключения. Работа с файлами](/lectures/2023-fall/lecture_09.html)
 * [Лекция 10. Компиляция Java-программы, устройство памяти JVM и Garbage Collector](/lectures/2023-fall/lecture_10.html)
+* [Лекция 11. Многопоточность](/lectures/2023-fall/lecture_11.html)
 
 
 ### Весенний семестр. Основы разработки серверных компонент
