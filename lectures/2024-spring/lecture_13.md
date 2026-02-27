@@ -334,57 +334,39 @@ public class KafkaController {
 
 Для того, чтобы поднять кафку локально, можно использовать следующий docker-compose файл:
 ```yml
-version: '3'
-
+version: "3.9"
 services:
   zookeeper:
-    image: wurstmeister/zookeeper:3.4.6
-    container_name: zookeeper
-    ports:
-      - "2181:2181"
+    image: confluentinc/cp-zookeeper:latest
+    container_name: spbu-kafka-zookeeper
     environment:
-      - ZOOKEEPER_CLIENT_PORT=2181
-      - ZOOKEEPER_TICK_TIME=2000
-    networks:
-      - kafka-net
-
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    ports: [ "22181:2181" ]
+    restart: unless-stopped
   kafka:
-    image: wurstmeister/kafka:latest
-    container_name: kafka
-    ports:
-      - "9093:9093"
+    image: confluentinc/cp-kafka:latest
+    container_name: spbu-kafka-kafka
     environment:
-      - KAFKA_ZOOKEEPER_CONNECT=zookeeper:2181
-      - KAFKA_ADVERTISED_LISTENER_NAME=PLAINTEXT
-      - KAFKA_LISTENER_SECURITY_PROTOCOL=PLAINTEXT
-      - KAFKA_LISTENER_NAME_PLAINTEXT_PORT=9093
-      - KAFKA_LISTENER_NAME_PLAINTEXT_LISTENER_SECURITY_PROTOCOL=PLAINTEXT
-      - KAFKA_LISTENER_NAME_PLAINTEXT_LISTENER_TCP_PORT=9093
-      - KAFKA_LISTENER_NAME_PLAINTEXT_LISTENER_PORT=9093
-      - KAFKA_LISTENER_NAME_PLAINTEXT_LISTENER_PROTOCOL=PLAINTEXT
-      - KAFKA_LISTENER_PORT=9093
-      - KAFKA_LISTENER_NAME_PLAINTEXT_LISTENER_TYPE=TCP
-      - KAFKA_LISTENER_PLAINTEXT=PLAIN
-      - KAFKA_LISTENER_PORT=9093
-    networks:
-      - kafka-net
-    depends_on:
-      - zookeeper
-
-  kafdrop:
-    image: obsidiandynamics/kafdrop:latest
-    container_name: kafdrop
-    ports:
-      - "9000:9000"
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092,PLAINTEXT_HOST://localhost:29092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    depends_on: [ zookeeper ]
+    ports: [ "29092:29092" ]
+    restart: unless-stopped
+  kafka-ui:
+    image: provectuslabs/kafka-ui:latest
+    container_name: spbu-kafka-ui
     environment:
-      - KAFKA_BROKERCONNECT=kafka:9093
-    networks:
-      - kafka-net
-
-networks:
-  kafka-net:
-    driver: bridge
-
+      - KAFKA_CLUSTERS_0_NAME=local
+      - KAFKA_CLUSTERS_0_BOOTSTRAPSERVERS=kafka:9092
+      - KAFKA_CLUSTERS_0_ZOOKEEPER=zookeeper:2181
+    depends_on: [ zookeeper, kafka ]
+    ports: [ "29093:8080" ]
+    restart: unless-stopped
 ```
 
 
