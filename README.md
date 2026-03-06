@@ -19,7 +19,7 @@
 * [Лекция 1. Сборка программы на java. Системы сборок. Клиент-серверная архитектура](/lectures/2024-spring/lecture_01.html)
 * [Лекция 2. Docker. Переменные окружения](/lectures/2024-spring/lecture_02.html)
 * [Лекция 3. Базы данных. Реляционные базы данных. SQL. Индексы в PSQL](/lectures/2024-spring/lecture_03.html)
-* [Лекция 4. Работа с sql-базами данных из приложений на java. Миграции баз данных.](/lectures/2024-spring/lecture_04.html)
+* [Лекция 4. Работа с sql-базами данных из приложений на java. JDBC. Миграции баз данных.](/lectures/2024-spring/lecture_04_new.html)
 * [Лекция 6. Аннотации и аспектно-ориентированное программирование. Lombok. Record. Работа с JSON.](/lectures/2024-spring/lecture_06.html)
 * [Лекция 8. Spring Framework](/lectures/2024-spring/lecture_07.html)
 * [Лекция 9. Spring JPA. Hibernate. Jooq](/lectures/2024-spring/lecture_08.html)
