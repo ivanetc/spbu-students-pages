@@ -1,6 +1,6 @@
 # Технологии программирования
 
-[Главная](/)/Конспект лекции: Spring Framework. JPA. Hibernate
+[Главная](/) / Конспект лекции: Spring Framework. JPA. Hibernate
 
 # Конспект лекции: Spring Framework. JPA. Hibernate
 

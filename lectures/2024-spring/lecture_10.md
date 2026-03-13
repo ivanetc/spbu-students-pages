@@ -1,6 +1,6 @@
 # # Технологии программирования
 
-[Главная](/)/Filters and Interceptors. Spring Security. Authentication and authorization
+[Главная](/) / Filters and Interceptors. Spring Security. Authentication and authorization
 ## Filters and Interceptors. Spring Security. Authentication and authorization
 
 
