@@ -1,7 +1,13 @@
-# Лекция 29.04
-## Попытки посмотреть на фронтенд. JSP. Thymeleaf. 
+# Технологии программирования
 
-## Что такое JSP?
+[Главная](/)/Попытки посмотреть на фронтенд. JSP. Thymeleaf.
+## JSP. Thymeleaf.
+
+### Содержание
+1. [Что такое JSP?](#p1)
+2. [Thymeleaf](#p2)
+
+## Что такое JSP? <a name="p1"></a>
 Java Server Pages — это технология Java, которая позволяет создавать динамические веб-страницы для Java приложений.
 
 
@@ -128,7 +134,7 @@ public class MainController {
 </html>
 ```
 
-## Thymeleaf
+## Thymeleaf <a name="p2"></a>
 
 Thymeleaf – современный шаблонизатор для Java (Spring-приложений).
 

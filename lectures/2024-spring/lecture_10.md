@@ -1,9 +1,16 @@
-# Лекция 20.04
+# # Технологии программирования
+
+[Главная](/)/Filters and Interceptors. Spring Security. Authentication and authorization
 ## Filters and Interceptors. Spring Security. Authentication and authorization
 
-[Назад на главную](/)
 
-## Filters and Interceptors (Фильтры и интерсепторы)
+### Содержание
+1. [Filters and Interceptors (Фильтры и интерсепторы)](#p1)
+2. [Аутентификация и авторизация](#p2)
+3. [JWT-аутентификация](#p3)
+4. [Как реализовать аутентификацию в Spring?](#p4)
+
+## Filters and Interceptors (Фильтры и интерсепторы) <a name="p1"></a>
 
 Фильтры и интерсепторы в Spring MVC играют ключевую роль в управлении запросами и ответами, обеспечивая гибкость и 
 контроль над процессом обработки запросов.
@@ -169,7 +176,7 @@ public class WebConfig implements WebMvcConfigurer {
 
 [Статейка про фильтры и интерсепторы](https://www.baeldung.com/spring-mvc-handlerinterceptor-vs-filter)
 
-## Аутентификация и авторизация
+## Аутентификация и авторизация <a name="p2"></a>
 
 **Аутентификация** — это процесс подтверждения личности пользователя. Представьте, что вы хотите зайти в свой аккаунт 
 на сайте, и вам нужно ввести логин и пароль. Когда вы вводите правильные данные, сайт подтверждает, что вы — это вы, 
@@ -201,7 +208,7 @@ public class WebConfig implements WebMvcConfigurer {
 
 ![](../../resources/lectures/2025-spring/auth_types.png)
 
-### JWT-аутентификация
+### JWT-аутентификация <a name="p3"></a>
 JSON Web Token (JWT) - это формат токена, который используется для аутентификации и обмена информацией между сторонами. 
 JWT состоит из трех частей: заголовка (header), нагрузки (payload) и подписи (signature). Заголовок содержит информацию 
 о типе токена и алгоритме шифрования, полезная нагрузка содержит данные о пользователе или другие полезные данные, 
@@ -237,7 +244,7 @@ https://struchkov.dev/blog/ru/jwt-implementation-in-spring/
 ![](https://javatodev.com/content/images/wordpress/2020/11/Untitled.png)
 
 
-## Как реализовать аутентификацию в Spring?
+## Как реализовать аутентификацию в Spring? <a name="p4"></a>
 
 #### SecurityFilterChain
 

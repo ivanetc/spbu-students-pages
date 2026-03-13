@@ -1,8 +1,16 @@
 # Технологии программирования
 
-[Назад на главную](/)
+[Главная](/)/Конспект лекции: Spring Framework. JPA. Hibernate
 
 # Конспект лекции: Spring Framework. JPA. Hibernate
+
+### Содержание
+1. [JPA (Java Persistence API)](#p1)
+2. [Spring JPA (Spring Data JPA)](#p2)
+3. [Hibernate](#p3)
+4. [Jooq (Java Object Oriented Querying)](#p4)
+
+## JPA (Java Persistence API) <a name="p1"></a>
 
 JPA (Java Persistence API) - это стандарт языка Java для управления реляционными данными в Java-приложениях. По сути, это набор правил и инструментов, которые позволяют работать с базами данных, используя объекты Java.
 
@@ -55,7 +63,7 @@ public class User {
 }
 ```
 
-## 1. Spring JPA (Spring Data JPA)
+## 1. Spring JPA (Spring Data JPA) <a name="p2"></a>
 
 Что это?
 Spring Data JPA — это модуль фреймворка Spring, упрощающий интеграцию с JPA (Java Persistence API). Он предоставляет абстракцию над JPA, автоматизируя рутинные операции (CRUD) через репозитории и уменьшая объем шаблонного кода.
@@ -103,7 +111,7 @@ public class UserService {
 }
 ```
 
-## Hibernate
+## Hibernate <a name="p3"></a>
 
 Что это?
 Hibernate — самая популярная реализация JPA, предоставляющая ORM (Object-Relational Mapping). Он преобразует объекты Java в записи БД и наоборот, управляя жизненным циклом сущностей.
@@ -216,7 +224,7 @@ spring:
 ```
 
 
-## Jooq (Java Object Oriented Querying)
+## Jooq (Java Object Oriented Querying) <a name="p4"></a>
 
 Что это?
 Jooq — библиотека для типобезопасного SQL. Вместо ORM она генерирует Java-классы по схеме БД, позволяя писать SQL-запросы через DSL (Domain-Specific Language).
