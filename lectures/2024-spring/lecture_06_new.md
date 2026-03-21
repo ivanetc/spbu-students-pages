@@ -1,13 +1,22 @@
-[Назад к списку лекций](/lectures/2023-spring/)
+# Веб-сервер на Java
 
-## Веб-сервер на java
+[Главная](/) / Лекция 6. Веб-сервер на Java
 
-### Предисловие 0. Аннотации и аспектно-ориентированное программирование. Lombok. Record. Работа с JSON.
+## Лекция 6. Веб-сервер на Java
 
-спектно-ориентированное программирование (АОП)](#p2)
+### Содержание
+1. [Аннотации в Java](#p1)
+2. [Аспектно-ориентированное программирование (АОП)](#p2)
 3. [Библиотека Lombok в Java](#p3)
 4. [Record](#p4)
 5. [Работа с JSON](#p5)
+6. [TCP/IP протоколы](#p6)
+7. [HTTP и REST API](#p7)
+8. [Java Servlets](#p8)
+9. [Jetty Server](#p9)
+10. [REST API принципы](#p10)
+
+## Аннотации в Java <a name="p1"></a>
 
 ## Аннотации в java <a name="p1"></a>
 
@@ -742,7 +751,7 @@ public class Car {
 #### Методы HTTP
 
 - get (нет тела запроса)
-- post (идемпотентны)
+- post (не идемпотентны)
 - put
 - delete
 
@@ -756,7 +765,7 @@ public class Car {
 
 ![](https://rune-dollar-ae8.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F12924760-9cf7-468b-816d-6d11ce557d4a%2FUntitled.png?id=1b2786c6-2c1a-4af7-87cc-b581b016c3d4&table=block&spaceId=dbe9c3d4-5646-48c6-ab44-d4087dd70e2f&width=1480&userId=&cache=v2)
 
-### Java Servlets
+### Java Servlets <a name="p8"></a>
 ![](https://rune-dollar-ae8.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Faae5ff78-9960-4de8-8d1b-18b17f654f56%2FUntitled.png?id=ae4cc8a8-1ddf-462d-9ef0-e9e8bf3ba747&table=block&spaceId=dbe9c3d4-5646-48c6-ab44-d4087dd70e2f&width=1690&userId=&cache=v2)
 
 Веб-контейнер - программа. В веб-контейнере развернут набор сервлетов. 
@@ -768,7 +777,7 @@ public class Car {
     compileOnly 'jakarta.servlet:jakarta.servlet-api:5.0.0'
 ```
 
-Пример сервлета:
+Пример простого сервлета (для демонстрации базовой структуры):
 ```java
 import java.io.IOException;
 
@@ -784,19 +793,234 @@ public class PingServlet extends HttpServlet {
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String reply = "<h1>pong</h1>";
-        response.getOutputStream().write( reply.getBytes("UTF-8") );
+        // Устанавливаем заголовки ответа ДО записи тела
         response.setContentType("text/html; charset=UTF-8");
         response.setHeader("Access-Control-Allow-Origin", "*");
-        response.setStatus( HttpServletResponse.SC_OK );
+        response.setStatus(HttpServletResponse.SC_OK);
         
-        // if response will have body
-        //  response.getOutputStream().write( reply.getBytes("UTF-8") );
+        // Теперь записываем тело ответа
+        String reply = "<h1>pong</h1>";
+        response.getOutputStream().write(reply.getBytes("UTF-8"));
     }
 }
 ```
 
-Также можем заимплементить doPost, doPut, doDelete
+### Пример сервлета с обработкой POST и DELETE запросов
+
+Вот упрощенный пример сервлета, который демонстрирует обработку POST и DELETE запросов с парсингом JSON тела запроса:
+
+```java
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.atomic.AtomicLong;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+// Пример класса для представления пользователя
+class User {
+    private Long id;
+    private String name;
+    private String email;
+    
+    // Конструкторы и геттеры/сеттеры
+    // [replacement - остальная часть класса User]
+}
+
+@WebServlet("/api/users/*")
+public class UserServlet extends HttpServlet {
+    // Хранилище пользователей в памяти
+    private static final Map<Long, User> users = new ConcurrentHashMap<>();
+    private static final AtomicLong idGenerator = new AtomicLong(1);
+    
+    // Jackson ObjectMapper для работы с JSON
+    private ObjectMapper objectMapper = new ObjectMapper();
+    
+    // Инициализация с тестовыми данными
+    @Override
+    public void init() throws ServletException {
+        // [replacement - инициализация тестовых данных]
+    }
+    
+    /**
+     * Обработка GET запросов
+     * [replacement - код метода doGet]
+     */
+    @Override
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // [replacement - обработка GET запросов]
+    }
+    
+    /**
+     * Обработка POST запросов для создания нового пользователя
+     * - Читает тело запроса как JSON
+     * - Создает нового пользователя
+     * - Возвращает созданного пользователя с кодом 201
+     */
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        // Устанавливаем заголовки ответа
+        response.setContentType("application/json; charset=UTF-8");
+        
+        try {
+            // Читаем тело запроса
+            StringBuilder sb = new StringBuilder();
+            String line;
+            BufferedReader reader = request.getReader();
+            while ((line = reader.readLine()) != null) {
+                sb.append(line);
+            }
+            
+            // Проверяем, что тело запроса не пустое
+            if (sb.length() == 0) {
+                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                Map<String, String> error = new HashMap<>();
+                error.put("error", "Тело запроса не может быть пустым");
+                error.put("code", "EMPTY_REQUEST_BODY");
+                objectMapper.writeValue(response.getOutputStream(), error);
+                return;
+            }
+            
+            // Преобразуем JSON в объект User
+            User user = objectMapper.readValue(sb.toString(), User.class);
+            
+            // Проверяем обязательные поля
+            if (user.getName() == null || user.getName().trim().isEmpty()) {
+                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                Map<String, String> error = new HashMap<>();
+                error.put("error", "Поле 'name' обязательно для заполнения");
+                error.put("code", "MISSING_NAME");
+                objectMapper.writeValue(response.getOutputStream(), error);
+                return;
+            }
+            
+            // Назначаем ID и сохраняем пользователя
+            user.setId(idGenerator.getAndIncrement());
+            users.put(user.getId(), user);
+            
+            // Возвращаем созданного пользователя с кодом 201
+            response.setStatus(HttpServletResponse.SC_CREATED);
+            objectMapper.writeValue(response.getOutputStream(), user);
+            
+        } catch (com.fasterxml.jackson.core.JsonProcessingException e) {
+            // Ошибка парсинга JSON - возвращаем 400
+            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            Map<String, String> error = new HashMap<>();
+            error.put("error", "Неверный формат JSON в теле запроса");
+            error.put("code", "INVALID_JSON_FORMAT");
+            objectMapper.writeValue(response.getOutputStream(), error);
+        } catch (Exception e) {
+            // В случае внутренней ошибки сервера - возвращаем 500
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            Map<String, String> error = new HashMap<>();
+            error.put("error", "Внутренняя ошибка сервера");
+            error.put("code", "INTERNAL_SERVER_ERROR");
+            objectMapper.writeValue(response.getOutputStream(), error);
+        }
+    }
+    
+    /**
+     * Обработка PATCH запросов для частичного обновления пользователя
+     * [replacement - код метода doPatch]
+     */
+    @Override
+    protected void doPatch(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // [replacement - обработка PATCH запросов]
+    }
+    
+    /**
+     * Обработка DELETE запросов для удаления пользователя
+     */
+    @Override
+    protected void doDelete(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        
+        // Устанавливаем заголовки ответа
+        response.setContentType("application/json; charset=UTF-8");
+        
+        try {
+            // Получаем ID пользователя из URL
+            String pathInfo = request.getPathInfo();
+            
+            if (pathInfo == null || pathInfo.equals("/")) {
+                // ID не указан - возвращаем 400
+                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                Map<String, String> error = new HashMap<>();
+                error.put("error", "Не указан ID пользователя для удаления");
+                error.put("code", "MISSING_USER_ID");
+                objectMapper.writeValue(response.getOutputStream(), error);
+                return;
+            }
+            
+            // Извлекаем ID из пути
+            String[] parts = pathInfo.split("/");
+            if (parts.length != 2) {
+                // Неверный формат пути - возвращаем 400
+                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                Map<String, String> error = new HashMap<>();
+                error.put("error", "Неверный формат ID пользователя");
+                error.put("code", "INVALID_ID_FORMAT");
+                objectMapper.writeValue(response.getOutputStream(), error);
+                return;
+            }
+            
+            try {
+                Long userId = Long.parseLong(parts[1]);
+                User removedUser = users.remove(userId);
+                
+                if (removedUser != null) {
+                    // Пользователь успешно удален - возвращаем 204 No Content
+                    response.setStatus(HttpServletResponse.SC_NO_CONTENT);
+                    // Нет тела ответа для 204
+                } else {
+                    // Пользователь не найден - возвращаем 404
+                    response.setStatus(HttpServletResponse.SC_NOT_FOUND);
+                    Map<String, String> error = new HashMap<>();
+                    error.put("error", "Пользователь не найден");
+                    error.put("code", "USER_NOT_FOUND");
+                    objectMapper.writeValue(response.getOutputStream(), error);
+                }
+                
+            } catch (NumberFormatException e) {
+                // Неверный формат ID - возвращаем 400
+                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+                Map<String, String> error = new HashMap<>();
+                error.put("error", "Неверный формат ID пользователя");
+                error.put("code", "INVALID_ID_FORMAT");
+                objectMapper.writeValue(response.getOutputStream(), error);
+            }
+            
+        } catch (Exception e) {
+            // В случае внутренней ошибки сервера - возвращаем 500
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+            Map<String, String> error = new HashMap<>();
+            error.put("error", "Внутренняя ошибка сервера");
+            error.put("code", "INTERNAL_SERVER_ERROR");
+            objectMapper.writeValue(response.getOutputStream(), error);
+        }
+    }
+}
+```
+
+Этот пример демонстрирует:
+- Обработку POST и DELETE запросов
+- Парсинг JSON тела запроса
+- Валидацию входных данных
+- Возврат различных HTTP кодов ответов (201, 400, 404, 500)
+- Работу с путями и параметрами URL
+- Обработку ошибок и исключений
 
 ![](https://rune-dollar-ae8.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F9288b649-444f-4dfd-940a-67386a7210f5%2FUntitled.png?id=ea7718cc-8a39-4d3f-a0e3-7b1b9053795c&table=block&spaceId=dbe9c3d4-5646-48c6-ab44-d4087dd70e2f&width=1690&userId=&cache=v2)
 
@@ -805,7 +1029,7 @@ public class PingServlet extends HttpServlet {
 приходящий к нему, и сервлеты соответственно эти запросы обрабатывают.
 
 
-### Jetty Server
+### Jetty Server <a name="p9"></a>
 
 Теперь нам нужен контейнер для наших сервлетов. Наиболее распространенные веб-сервера на java - Tom Cat, Jetty и др.
 На этой лекции для избежания взрыва мозга посмотрим на Jetty, тк он кажется чуть проще.
@@ -816,24 +1040,53 @@ Jetty — свободный контейнер сервлетов, написа
 ```groovy
 implementation 'org.eclipse.jetty:jetty-servlet:11.0.14'
 implementation 'org.eclipse.jetty:jetty-server:11.0.14'
+implementation 'com.fasterxml.jackson.core:jackson-core:2.15.2'
+implementation 'com.fasterxml.jackson.core:jackson-databind:2.15.2'
 ```
 
 Создадим стартовый класс для нашего сервера:
 ```java
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.servlet.ServletContextHandler;
+
 public class JettyServer {
     private Server server;
 
     public void start() throws Exception {
-        int port = 8080;
-        Server server = new Server(8080);
+        int port = 8080;  // Определяем порт в переменной
+        Server server = new Server(port);  // Используем переменную вместо хардкода
         ServletContextHandler handler = new ServletContextHandler(server, "/");
+        
+        // Регистрируем оба сервлета
         handler.addServlet(PingServlet.class, "/ping");
+        handler.addServlet(UserServlet.class, "/api/users/*");
 
         try {
             server.start();
-            System.out.println("Listening port : " + port );
+            System.out.println("Сервер запущен и слушает порт: " + port);
+            System.out.println("Доступные эндпоинты:");
+            System.out.println("  - GET /ping - простой пинг-понг");
+            System.out.println("  - POST /api/users - создать нового пользователя");
+            System.out.println("  - DELETE /api/users/{id} - удалить пользователя");
+            
+            server.join();  // Добавляем join() чтобы сервер продолжал работать
         } catch (Exception e) {
-            System.out.println("Error.");
+            System.out.println("Ошибка при запуске сервера:");
+            e.printStackTrace();
+        }
+    }
+}
+```
+
+Также создадим главный класс для запуска приложения:
+```java
+public class Application {
+    public static void main(String[] args) {
+        JettyServer server = new JettyServer();
+        try {
+            server.start();
+        } catch (Exception e) {
+            System.err.println("Не удалось запустить сервер:");
             e.printStackTrace();
         }
     }
@@ -841,7 +1094,7 @@ public class JettyServer {
 ```
 
 
-## REST API
+## REST API <a name="p10"></a>
 
 REST (Representational State Transfer) — это архитектурный стиль для построения распределённых систем, особенно веб-сервисов. REST API — это API, который следует принципам REST.
 
