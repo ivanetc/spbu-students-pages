@@ -46,10 +46,13 @@
     - Надстройка для быстрого старта проектов.
     - **Автоконфигурация**, встроенный сервер (Tomcat), стартеры.
 
-![](https://cdn.javarush.com/images/article/15aad279-13e0-49ce-820a-094570fb5fb1/512.webp)
+![](../../resources/lectures/2025-spring/lec07/p1.png)
 ---
 
 ## **3. Dependency Injection (DI) и IoC** <a name="p3"></a>
+
+![](../../resources/lectures/2025-spring/lec07/p2.png)
+
 ### **Ключевые понятия**
 - **Bean**: объект, управляемый Spring-контейнером.
 - **IoC**: инверсия управления (контейнер создаёт и связывает объекты).
