@@ -14,7 +14,7 @@
 7. [Autowiring](#p7)
 8. [Конфигурация в классическом Spring](#p8)
 9. [Spring Boot и автоконфигурация](#p9)
-10. [Введение в Spring MVC (улучшенная версия)](#p10)
+10. [Введение в Spring MVC](#p10)
 11. [Быстрый старт: Spring Initializr](#p11)
 12. [Итоговая модель](#p12)
 
@@ -507,7 +507,7 @@ Spring Boot не отменяет DI — он:
 ![](../../resources/lectures/2025-spring/lec07/p4.png)
 
 ---
-## 8. Введение в Spring MVC (улучшенная версия) <a name="p10"></a>
+## 8. Введение в Spring MVC <a name="p10"></a>
 
 
 Spring MVC — это модуль Spring, который реализует web-layer: связывает HTTP-запросы и Java-код.
