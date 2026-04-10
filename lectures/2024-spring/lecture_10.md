@@ -1,405 +1,242 @@
-# # Технологии программирования
+# Технологии программирования
 
-[Главная](/) / Filters and Interceptors. Spring Security. Authentication and authorization
-## Filters and Interceptors. Spring Security. Authentication and authorization
-
+[Главная](/) / Попытки посмотреть на фронтенд. JSP. Thymeleaf.
+## JSP. Thymeleaf.
 
 ### Содержание
-1. [Filters and Interceptors (Фильтры и интерсепторы)](#p1)
-2. [Аутентификация и авторизация](#p2)
-3. [JWT-аутентификация](#p3)
-4. [Как реализовать аутентификацию в Spring?](#p4)
+1. [Что такое JSP?](#p1)
+2. [Thymeleaf](#p2)
 
-## Filters and Interceptors (Фильтры и интерсепторы) <a name="p1"></a>
+## Что такое JSP? <a name="p1"></a>
+Java Server Pages — это технология Java, которая позволяет создавать динамические веб-страницы для Java приложений.
 
-Фильтры и интерсепторы в Spring MVC играют ключевую роль в управлении запросами и ответами, обеспечивая гибкость и 
-контроль над процессом обработки запросов.
 
-Прежде, чем говорить о фильтрах и интерсепторах, нужно разобраться, как обрабатываются запросы в Spring
+JSP позволяет разработчику:
+- получать данные из веб-страницы в Java-код;
+- отправлять данные из Java кода на веб-страницу;
+- писать Java-код, прямо внутри html (однако злоупотреблять этим не стоит).
 
-### Как запросы попадают в Controller?
+Необходимость знания JSP можно оценить довольно высоко по нескольким причинам:
+- JSP — одна из основных Java web-технологий;
+- JSP широко используется в большинстве компаний и проектов;
+- JSP бесшовно интегрируется с сервлетами Java внутри контейнера сервлетов.
 
-В Spring Java запросы попадают в контроллер через цепочку обработчиков, начиная с DispatcherServlet. DispatcherServlet 
-является центральным компонентом Spring MVC, который отвечает за обработку входящих HTTP-запросов. DispatcherServlet 
-в Spring MVC - это центральный сервлет, который обрабатывает входящие HTTP-запросы и направляет их к 
-соответствующему контроллеру для дальнейшей обработки. 
+### Жизненный цикл JSP:
 
-Он играет ключевую роль в архитектуре Spring MVC, выполняя следующие функции:
-- Анализ запроса: DispatcherServlet анализирует URL запроса, параметры запроса и заголовки, чтобы определить, какой контроллер должен обработать запрос.
-- Преобразование параметров: DispatcherServlet преобразует параметры запроса в объекты Java, используя механизмы привязки данных.
-- Вызов метода контроллера: На основе анализа запроса DispatcherServlet вызывает соответствующий метод контроллера, передавая ему преобразованные параметры.
-- Обработка ответа: После выполнения логики в контроллере, DispatcherServlet преобразует ответ от контроллера в подходящий формат (например, HTML, JSON) и отправляет его обратно клиенту.
+- Трансляция (JSP → Servlet).
+- Компиляция (Servlet → .class).
+- Выполнение (обработка запросов).
 
-DispatcherServlet позволяет разработчикам легко создавать и настраивать веб-приложения на Java, используя Spring MVC, 
-обеспечивая гибкость и контроль над обработкой запросов и ответов.
+### Плюсы:
 
-![](https://www.baeldung.com/wp-content/uploads/2021/05/filters_vs_interceptors-1536x573.jpg)
+- Простота вставки Java-кода.
+- Поддержка JSTL и EL.
 
-### Что такое фильтры и интерсепторы? В чем отличие?
+### Минусы:
 
-**Фильтры в Spring MVC** работают на уровне Java Servlet и могут выполнять широкий спектр задач, таких как сжатие данных, 
-аутентификация, преобразование кодировки и т.д. Они применяются до того, как запрос достигнет контроллера, и могут 
-модифицировать запрос или ответ перед их передачей дальше по цепочке обработки. Фильтры настраиваются через конфигурацию 
-web.xml или аннотацию @WebFilter.
+- Смешивание логики и представления.
+- Устаревание (Thymeleaf, JSF – современные альтернативы).
 
-**Интерсепторы в Spring MVC**, напротив, тесно интегрированы с фреймворком Spring и предназначены для выполнения действий 
-до и после обработки контроллера. Они позволяют реализовать логику, которая должна выполняться независимо от конкретного
-контроллера, например, проверку авторизации или логирование. Интерсепторы настраиваются через конфигурацию MVC или 
-использование HandlerInterceptor.
+Важно: JSP-файлы компилируются в сервлеты при первом запросе, а затем работают как обычные Java-классы."*
 
-Оба инструмента имеют свои преимущества и недостатки, и выбор между ними зависит от конкретных требований проекта. 
-Фильтры лучше подходят для выполнения операций, не связанных напрямую с обработкой запросов контроллерами, в то время 
-как интерсепторы обеспечивают более тонкую настройку процессов внутри Spring MVC.
+![](https://cdn.javarush.com/images/article/5c675f57-eee0-4fad-9fcb-642ed80552d0/800.webp)
 
-### Как создать фильтр
+### Пример кода
 
-Чтобы создать фильтр в Spring, вам необходимо выполнить следующие шаги:
-1. Реализовать интерфейс `javax.servlet.Filter` или `jakarta.servlet.Filter` (для Spring Boot 3 и выше).
-2. Переопределить метод `doFilter()` для реализации логики фильтрации.
+1. Добавление зависимости
+```groovy
+	implementation 'javax.servlet:jstl'
+	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+```
 
-Пример создания простого фильтра, который выводит сообщение при каждом запросе%
+2. Модель данных
 
 ```java
-@Component
-public class LoggingFilter implements Filter {
+public record Person(String firstName, String lastName) {}
+```
 
-    private static final Logger logger = LogManager.getLogger(LogFilter.class);
+3. Контроллер
 
-    @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
-            throws IOException, ServletException {
-        logger.info("Hello from: " + request.getLocalAddr());
-        chain.doFilter(request, response);
+```java
+import java.util.ArrayList;
+import java.util.List;
+
+import org.o7planning.sbjsp.model.Person;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+@Controller
+public class MainController {
+
+    private static List<Person> persons = new ArrayList<Person>();
+
+    static {
+        persons.add(new Person("Bill", "Gates"));
+        persons.add(new Person("Steve", "Jobs"));
+    }
+
+    @RequestMapping(value = { "/", "/index" }, method = RequestMethod.GET)
+    public String index(Model model) {
+
+        String message = "Hello Spring Boot + JSP";
+
+        model.addAttribute("message", message);
+
+        return "index";
+    }
+
+    @RequestMapping(value = { "/personList" }, method = RequestMethod.GET)
+    public String viewPersonList(Model model) {
+
+        model.addAttribute("persons", persons);
+
+        return "personList";
     }
 
 }
 ```
 
-В этом примере класс `LoggingFilter` реализует интерфейс `Filter`, переопределяя метод `doFilter()`. Внутри метода 
-`doFilter()` мы выводим сообщение в лог, а затем вызываем `chain.doFilter()`, чтобы передать запрос дальше по цепочке 
-фильтров.
 
-Чтобы зарегистрировать фильтр в контексте Spring, можно использовать аннотацию `@Component`, которая автоматически 
-регистрирует компонент в контексте Spring.
+4. Страничка jsp
 
-### Как создать интерсептор
+```html
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-Чтобы создать интерсептор в Spring, вам нужно выполнить следующие шаги:
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Person List</title>
+    <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/style.css"/>
+  </head>
+  <body>
+    <h1>Person List</h1>
+   
+    <br/><br/>
+    <div>
+      <table border="1">
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+        </tr>
+        <c:forEach  items="${persons}" var ="person">
+        <tr>
+          <td>${person.firstName}</td>
+          <td>${person.lastName}</td>
+        </tr>
+        </c:forEach>
+      </table>
+    </div>
+  </body>
+ 
+</html>
+```
 
-1.Реализовать интерфейс `org.springframework.web.servlet.HandlerInterceptor`.
-2.Переопределить методы `preHandle`, `postHandle` и `afterCompletion` для реализации логики интерсептора.
+## Thymeleaf <a name="p2"></a>
 
-Пример создания простого интерсептора, который выводит сообщение при каждом запросе:
+Thymeleaf – современный шаблонизатор для Java (Spring-приложений).
 
-```java
-public class LoggingInterceptor implements HandlerInterceptor {
+Преимущества:
+- Работает с HTML, XML, JavaScript
+- Натуральные шаблоны (отображаются даже в браузере)
+- Интеграция с Spring
 
-    private Logger logger = LoggerFactory.getLogger(LogInterceptor.class);
+```html
+<html xmlns:th="http://www.thymeleaf.org">
+  <body>
+    <p th:text="${message}">Hello, Thymeleaf!</p>
+  </body>
+</html>
+```
 
-    @Override
-    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) 
-      throws Exception {
-        logger.info("preHandle");
-        return true;
-    }
+### Основные директивы Thymeleaf
 
-    @Override
-    public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) 
-      throws Exception {
-        logger.info("postHandle");
-    }
+- th:text – замена текста.
+- th:each – циклы (аналог JSTL <c:forEach>).
+- th:if / th:unless – условные блоки.
+- th:href – динамические ссылки.
 
-    @Override
-    public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) 
-      throws Exception {
-        logger.info("afterCompletion");
-        // после обработчика, уже не можем поменять респонс
-    }
+Пример
+```html
+<ul>
+  <li th:each="item : ${items}" th:text="${item.name}"></li>
+</ul>
+```
 
+### Пример
+Зависимости
+
+```groovy
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.0' // или новее
+    id 'io.spring.dependency-management' version '1.1.4'
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
 }
 ```
 
-В этом примере класс `LoggingInterceptor` реализует интерфейс `HandlerInterceptor`, переопределяя методы `preHandle`, 
-`postHandle` и `afterCompletion`. Внутри метода `preHandle` мы выводим сообщение в лог, а затем возвращаем `true`, 
-чтобы разрешить дальнейшую обработку запроса. 
-
-Методы `postHandle` и `afterCompletion` могут использоваться для дополнительной логики после обработки запроса.
-Методы postHandle и afterCompletion в Spring MVC Interceptors выполняют разные задачи и вызываются в разное время 
-в процессе обработки запроса:
-- postHandle - вызывается после того, как метод-обработчик контроллера завершил свою работу, но до того, как 
-DispatcherServlet начнет обрабатывать результат. Этот метод используется для добавления информации в объект 
-ModelAndView, который будет передан представлению. Например, здесь можно добавить дополнительные атрибуты модели или 
-изменить содержимое объекта ModelAndView.
-- afterCompletion - вызывается после того, как представление было полностью отрисовано и ответ был отправлен клиенту.
-Этот метод используется для выполнения операций, связанных с завершением обработки запроса, таких как логирование, 
-очистка ресурсов и т.д. Здесь уже нельзя изменить результат обработки запроса, так как он был отправлен клиенту.
-
-Таким образом, основное отличие между этими двумя методами заключается в том, что postHandle дает возможность модифицировать результат обработки запроса до его отправки клиенту, в то время как afterCompletion позволяет выполнить операции после завершения обработки запроса и отправки ответа клиенту.
-
-Чтобы зарегистрировать интерсептор в контексте Spring:
-
+Контроллер
 ```java
-import org.springframework.context.annotation.Configuration;
-import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
-
-@Configuration
-public class WebConfig implements WebMvcConfigurer {
-
-    private final LogInterceptor logInterceptor;
-
-    // Внедрение через конструктор (лучше, чем @Autowired)
-    public WebConfig(LogInterceptor logInterceptor) {
-        this.logInterceptor = logInterceptor;
-    }
-
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(logInterceptor)
-                .addPathPatterns("/**"); // Применяется ко всем URL
+@Controller
+public class PersonController {
+    @GetMapping("/people-thymeleaf")
+    public String getPeople(Model model) {
+        List<Person> people = List.of(
+            new Person("Иван", "Иванов"),
+            new Person("Петр", "Петров")
+        );
+        model.addAttribute("people", people);
+        return "people-thymeleaf"; // Будет искать people-thymeleaf.html
     }
 }
 ```
-
-### Как выбрать что использовать?
-
-Лучше использовать фильтры для:
-- Authentication
-- Logging and auditing
-- Image and data compression
-- Any functionality we want to be decoupled from Spring MVC
-
-Лучше использовать интерспеторы для:
-- Handling cross-cutting concerns such as application logging
-- Detailed authorization checks
-- Manipulating the Spring context or model
-
-[Статейка про фильтры и интерсепторы](https://www.baeldung.com/spring-mvc-handlerinterceptor-vs-filter)
-
-## Аутентификация и авторизация <a name="p2"></a>
-
-**Аутентификация** — это процесс подтверждения личности пользователя. Представьте, что вы хотите зайти в свой аккаунт 
-на сайте, и вам нужно ввести логин и пароль. Когда вы вводите правильные данные, сайт подтверждает, что вы — это вы, 
-и разрешает вам продолжить работу. Это и есть аутентификация.
-
-**Авторизация** — это процесс предоставления пользователю прав доступа к определённым ресурсам или действиям на сайте. 
-Например, после успешной аутентификации вы можете получить доступ к личным настройкам своего профиля, опубликовать 
-пост в блоге или отредактировать статью. Эти действия требуют авторизации.
-
-Существует несколько основных способов аутентификации, каждый из которых имеет свои преимущества и недостатки:
-
-- **Парольная аутентификация** - это классический способ аутентификации, основанный на вводе пользователем логина и 
-пароля. Этот метод прост в реализации, но имеет низкую степень безопасности, так как пароли могут быть украдены или 
-взломаны.
-- **Двухфакторная аутентификация (2FA)** - это метод, который требует от пользователя предоставить два фактора 
-аутентификации: что-то, что вы знаете (пароль), и что-то, что у вас есть (например, токен или код, отправленный на 
-мобильное устройство). Это значительно повышает уровень безопасности, поскольку злоумышленнику необходимо получить 
-доступ к обоим факторам одновременно.
-- **Биометрическая аутентификация** - это метод, который использует уникальные биологические характеристики пользователя,
-такие как отпечаток пальца, сканирование радужной оболочки глаза или распознавание голоса, для аутентификации. 
-Преимущества включают высокую степень безопасности и удобство использования.
-- **Аутентификация по сертификатам** - этот метод использует цифровые сертификаты для подтверждения личности 
-пользователя. Сертификат содержит открытый ключ пользователя, который может быть проверен сервером. Преимущества 
-включают высокий уровень безопасности и возможность шифрования данных.
-- **Аутентификация по токенам** - этот метод использует токены (физические или виртуальные) для аутентификации. 
-Токены могут содержать уникальный код или ключ, который пользователь должен предоставить для аутентификации. 
-Преимущества включают удобство использования и возможность удалённой аутентификации.
-
-
-![](../../resources/lectures/2025-spring/auth_types.png)
-
-### JWT-аутентификация <a name="p3"></a>
-JSON Web Token (JWT) - это формат токена, который используется для аутентификации и обмена информацией между сторонами. 
-JWT состоит из трех частей: заголовка (header), нагрузки (payload) и подписи (signature). Заголовок содержит информацию 
-о типе токена и алгоритме шифрования, полезная нагрузка содержит данные о пользователе или другие полезные данные, 
-а подпись используется для проверки подлинности токена.
-
-![](../../resources/lectures/2025-spring/jwt_parts.png)
-
-
-JWT-аутентификация позволяет безопасно передавать информацию о пользователе между клиентом и сервером без необходимости 
-постоянного обращения к базе данных для проверки подлинности. Это упрощает процесс аутентификации и уменьшает нагрузку 
-на сервер.
-
-![](../../resources/lectures/2025-spring/jwt_requests.png)
-
-
-Представьте, что вы студент, который хочет войти в здание университета. Обычно, чтобы попасть внутрь, вам нужно 
-предъявить студенческий билет охраннику на входе. Это подтверждает вашу личность и даёт вам право 
-находиться в университете.
-Примерно так же работает JWT-аутентификация. Только вместо студенческого билета используется специальный токен — JWT. 
-Этот токен содержит информацию о пользователе, например, его имя, роль (студент) и дату рождения. Когда пользователь хочет получить доступ к какому-либо ресурсу, он отправляет JWT-токен вместе с запросом. Сервер проверяет токен, расшифровывает его и узнаёт, кто отправил запрос. Если информация в токене верна, сервер разрешает пользователю получить доступ к ресурсу.
-Пример использования JWT-аутентификации в университете:
-1. Студент регистрируется в системе и вводит свои данные.
-2. Система создаёт JWT-токен, который содержит информацию о студенте, например, его имя, роль и дату создания токена.
-3. Система отправляет JWT-токен студенту.
-4. Студент сохраняет JWT-токен в своём устройстве.
-5. Каждый раз, когда студент хочет получить доступ к какой-либо странице системы, он отправляет JWT-токен вместе с запросом.
-6. Сервер проверяет JWT-токен, расшифровывает его и узнаёт, кто отправил запрос. Если информация в токене верна, сервер разрешает студенту получить доступ к странице.
-
-
-https://struchkov.dev/blog/ru/what-is-jwt/
-https://struchkov.dev/blog/ru/jwt-implementation-in-spring/
-
-![](https://javatodev.com/content/images/wordpress/2020/11/Untitled.png)
-
-
-## Как реализовать аутентификацию в Spring? <a name="p4"></a>
-
-#### SecurityFilterChain
-
-В контексте Spring Security, **SecurityFilterChain** играет ключевую роль в обеспечении безопасности веб-приложений. 
-Он позволяет разработчикам контролировать, какие пользователи могут получить доступ к определенным ресурсам приложения, 
-а также обеспечивает защиту от несанкционированного доступа и атак.
-
-**SecurityFilterChain** в Spring Security - это набор фильтров безопасности, которые обрабатывают входящие запросы и 
-определяют, должен ли запрос быть авторизован или нет. Этот механизм позволяет гибко настраивать правила аутентификации 
-и авторизации для различных типов запросов, а также обеспечивает возможность расширения и кастомизации процесса 
-аутентификации и авторизации.
-
-![](https://docs.spring.io/spring-security/reference/_images/servlet/architecture/securityfilterchain.png)
-
-
-**SecurityFilterChain** реализуется через класс SecurityFilterChain, который является частью Spring Security. Этот класс 
-позволяет разработчикам создавать и настраивать цепочки фильтров безопасности, определяя порядок их выполнения и 
-условия, при которых каждый фильтр должен быть применен.
-
-#### BasicAuthenticationFilter
-
-**BasicAuthenticationFilter** в Spring Security - это один из основных фильтров, используемых для реализации базовой аутентификации HTTP. Он отвечает за обработку запросов, содержащих заголовок Authorization с типом Basic, который содержит закодированные имя пользователя и пароль.
-Устройство **BasicAuthenticationFilter** включает в себя следующие ключевые компоненты:
-
-1. **Анализ заголовка _Authorization_**: Фильтр проверяет наличие заголовка _Authorization_ в запросе и определяет его тип 
-(Basic). Если тип не соответствует ожидаемому, фильтр пропускает запрос без дальнейшей обработки.
-2. **Декодирование учетных данных**: Если тип заголовка _Authorization_ соответствует ожидаемому, фильтр декодирует 
-содержимое заголовка, используя алгоритм _Base64_. Полученная строка разделяется на имя пользователя и пароль.
-3. **Проверка учетных данных**: Фильтр проверяет полученные учетные данные, сравнивая их с сохраненными в системе. 
-Если учетные данные совпадают, фильтр устанавливает контекст безопасности и пропускает запрос дальше по цепочке 
-фильтров. В противном случае, фильтр генерирует исключение _AuthenticationException_, которое указывает на неудачную 
-попытку аутентификации.
-4. **Обработка исключений**: В случае неудачной аутентификации, фильтр может вернуть различные коды ошибок в зависимости от настроек системы. Например, если учетные данные не найдены, может быть возвращен код ошибки 401 (Unauthorized).
-**BasicAuthenticationFilter** является ключевым компонентом в процессе аутентификации в Spring Security. Он обеспечивает базовую поддержку для аутентификации пользователей, передающих свои учетные данные через заголовок Authorization в запросах.
-
-![](https://docs.spring.io/spring-security/reference/_images/servlet/authentication/unpwd/basicauthenticationfilter.png)
-
-### Как реализовать простую basic-аутентификацию?
-
-Заведем класс SecurityConfig для конфигурации. 
-
-```java
-@Configuration
-@EnableWebSecurity
-public class SecurityConfig {
-    // здесь будет код конфига
-}
+Страница people-thymeleaf.html
+```html
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список людей (Thymeleaf)</title>
+</head>
+<body>
+    <h1>Список людей</h1>
+    <table border="1">
+        <tr>
+            <th>Имя</th>
+            <th>Фамилия</th>
+        </tr>
+        <tr th:each="person : ${people}">
+            <td th:text="${person.firstName}"></td>
+            <td th:text="${person.lastName}"></td>
+        </tr>
+    </table>
+</body>
+</html>
 ```
 
-Аннотация `@Configuration` в Spring используется для обозначения класса как источника бинов (bean-компонентов) для 
-контекста приложения. Класс, помеченный этой аннотацией, становится конфигурационным классом, который может определять 
-бины и их зависимости.
 
-Аннотация `@EnableWebSecurity` применяется к классу конфигурации, чтобы включить поддержку веб-безопасности в 
-приложении. Она активирует базовые настройки безопасности, такие как аутентификация и авторизация, предоставляемые 
-`Spring Security`. Эта аннотация автоматически регистрирует необходимые фильтры безопасности и конфигурацию 
-безопасности, позволяя разработчику сосредоточиться на специфической настройке безопасности приложения.
 
-Использование этих аннотаций вместе позволяет легко интегрировать `Spring Security` в ваше приложение и настроить 
-его под конкретные требования безопасности.
-
-Далее реализуем функцию создающую Bean UserDetailsService:
-
-```java
-@Configuration
-@EnableWebSecurity
-public class SecurityConfig {
-
-    @Bean
-    public static PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails admin = User.builder()
-                .username("admin")
-                .password(passwordEncoder().encode("admin"))
-                .roles("ADMIN")
-                .build();
-        return new InMemoryUserDetailsManager(admin);
-    }
-}
+Если нужно изменить параметры Thymeleaf (например, кодировку), добавьте в application.properties:
+```yaml
+# Отключение кэша шаблонов (для разработки)
+spring.thymeleaf.cache=false
+# Указание префикса/суффикса (по умолчанию и так /templates/ и .html)
+spring.thymeleaf.prefix=classpath:/templates/
+spring.thymeleaf.suffix=.html
+# Кодировка
+spring.thymeleaf.encoding=UTF-8
 ```
 
-**UserDetailsService** в _Spring Security_ - это интерфейс, который предоставляет метод `loadUserByUsername(String username)` 
-для поиска пользователя по имени пользователя. Этот интерфейс используется для загрузки пользовательских данных из 
-любого источника, например, базы данных или LDAP. Реализация этого интерфейса позволяет _Spring Security_ получать 
-информацию о пользователе, необходимую для аутентификации и авторизации.
-
-**UserDetails** - это класс, который описывает пользовательские данные. Он содержит информацию о пользователе, такую как 
-имя пользователя, пароль, роли и другие атрибуты, которые могут потребоваться для аутентификации и авторизации. 
-Класс `UserDetails` реализует интерфейс `Serializable`, что позволяет сериализовать объекты этого класса.
-
-Spring Security использует `UserDetailsService` для получения объекта `UserDetails` для конкретного пользователя. После 
-получения объекта `UserDetails` Spring Security может выполнить аутентификацию и авторизацию пользователя, используя его данные.
-
-**InMemoryUserDetailsManager** в Spring Security - это реализация интерфейса UserDetailsService, которая хранит информацию 
-о пользователях в памяти. Это означает, что все пользовательские данные, включая пароли и роли, хранятся в оперативной 
-памяти приложения.
-
-InMemoryUserDetailsManager используется для тестирования и разработки, когда требуется быстро настроить систему 
-аутентификации без необходимости подключения к базе данных. Он позволяет легко добавлять, удалять и изменять 
-пользователей прямо в коде, что делает его идеальным инструментом для быстрой настройки безопасности приложения.
-
-Далее настроим непосредственно SecurityFilterChain: 
-
-```java
-@Configuration
-@EnableWebSecurity
-public class SecurityConfig {
-
-    @Bean
-    public static PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
-
-    @Bean
-    public UserDetailsService userDetailsService() {
-        UserDetails admin = User.builder()
-                .username("admin")
-                .password(passwordEncoder().encode("admin"))
-                .roles("ADMIN")
-                .build();
-        return new InMemoryUserDetailsManager(admin);
-    }
-
-    @Bean
-    SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.csrf(AbstractHttpConfigurer::disable)
-                .authorizeHttpRequests(authorize ->
-                        authorize.requestMatchers(HttpMethod.GET, "api/general/**").permitAll())
-                .authorizeHttpRequests(authorize ->
-                        authorize.requestMatchers(HttpMethod.GET, "api/secret/**").authenticated())
-                .httpBasic(Customizer.withDefaults());
-
-        return http.build();
-    }
-}
-```
-
-Метод `securityFilterChain` позволяет настроить _HttpSecurity_, который управляет конфигурацией безопасности HTTP. 
-Мы используем метод authorizeRequests для указания, что все запросы должны быть аутентифицированы, и метод `httpBasic` 
-для включения базовой аутентификации.
-
-Метод `requestMatchers` в Spring Security используется для определения URL-адресов и методов HTTP, для которых будет 
-применяться конфигурация безопасности. Этот метод позволяет точно настроить, какие запросы будут обрабатываться 
-определенным образом, например, требовать аутентификацию или авторизацию.
-
-В этом примере мы используем метод `requestMatchers` для указания, что запросы, соответствующие шаблону `api/secret/**` 
-и методу `HTTP GET`, должны быть авторизованы.
-
-![](https://docs.spring.io/spring-security/reference/_images/servlet/authentication/unpwd/basicauthenticationentrypoint.png)
+![](../../resources/lectures/2025-spring/thymeleaf.png)
 
 
-[Документация по Spring Security](https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/basic.html)
+## Ссылки:
+[Статья на javarush](https://javarush.com/groups/posts/2655-chto-takoe-jsp-razbiraemsja-s-vozmozhnostjami-na-praktike)
 
-[Пошаговая инструкция (почти рабочая)](https://springjava.com/spring-boot/spring-security-basic-authentication-spring-boot/)
+[Статья на Baeldung](https://www.baeldung.com/spring-boot-jsp)

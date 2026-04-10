@@ -24,8 +24,8 @@
 * [Лекция 6. Веб-сервер на java. Аннотации. Работа с json](/lectures/2024-spring/lecture_06_new.html)
 * [Лекция 7. Spring Framework](/lectures/2024-spring/lecture_07_new.html)
 * [Лекция 8. Spring JPA. Hibernate. Jooq](/lectures/2024-spring/lecture_08_new.html)
-* [Лекция 10. Filters and Interceptors. Spring Security. Authentication and authorization](/lectures/2024-spring/lecture_10.html)
-* [Лекция 11. Thymeleaf. Jsp](/lectures/2024-spring/lecture_11.html)
+* [Лекция 9. Валидация. Filters and Interceptors. Spring Security. Authentication and authorization](/lectures/2024-spring/lecture_09.html)
+* [Лекция 10. Thymeleaf. Jsp](/lectures/2024-spring/lecture_10.html)
 * [Лекция 13. DDD и EDD. Kafka](/lectures/2024-spring/lecture_13.html)
 
 
