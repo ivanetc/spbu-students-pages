@@ -39,6 +39,9 @@
 - **общие ресурсы** — база данных используется всеми инстансами
 - **конкуренция** — другие приложения борются за CPU и память
 
+![Архитектура UserService в production](../../resources/lectures/2025-spring/lec10/p0.png)
+
+
 ### Сценарий: что может пойти не так
 
 #### Сценарий 1: Невидимая деградация
@@ -87,6 +90,9 @@ UserService делает запрос `SELECT * FROM users WHERE id = ?` для 
 
 ### Последствия для бизнеса
 
+![Архитектура UserService в production](../../resources/lectures/2025-spring/lec10/p9.png)
+
+
 Это не просто технические проблемы:
 
 - **Downtime** → потеря денег
@@ -129,6 +135,9 @@ UserService делает запрос `SELECT * FROM users WHERE id = ?` для 
 ### Жизненный цикл приложения
 
 Backend-приложение проходит через несколько фаз:
+
+![Жизненный цикл приложения](../../resources/lectures/2025-spring/lec10/p10.png)
+
 
 #### Startup (запуск)
 
@@ -219,6 +228,9 @@ public class UserController {
 9. **Thread** возвращается в pool
 10. **Connection** возвращается в pool
 
+![Что происходит при вызове GET /api/users/123](../../resources/lectures/2025-spring/lec10/p11.png)
+
+
 Каждый из этих шагов может быть bottleneck. Каждый потребляет ресурсы. Каждый может сломаться.
 
 ### Границы системы
@@ -251,7 +263,7 @@ public class UserController {
 
 Эти состояния нужно **отслеживать** и **сообщать** load balancer'у. Иначе nginx будет слать трафик на инстанс, который ещё не готов или уже завершается.
 
-![Жизненный цикл backend-приложения](../../resources/lectures/2024-spring/lec10/p2.png)
+![Жизненный цикл backend-приложения](../../resources/lectures/2025-spring/lec10/p2.png)
 
 ### Ресурсы и их ограничения
 
@@ -338,6 +350,9 @@ Gauge.builder("users.online", userService, UserService::getOnlineCount)
 
 #### Histogram (гистограмма)
 
+![Гистограмма](../../resources/lectures/2025-spring/lec10/p12.png)
+
+
 Распределение значений. Позволяет вычислять перцентили (p50, p95, p99).
 
 Примеры:
@@ -366,6 +381,9 @@ userLookupTimer.record(() -> {
 👉 **Ключевая идея**: метрики — это не для отладки конкретного запроса. Это для понимания поведения системы в целом.
 
 ### Health checks
+
+![Health checks](../../resources/lectures/2025-spring/lec10/p13.png)
+
 
 **Health check** — это endpoint, который показывает, здорово ли приложение.
 
@@ -664,6 +682,9 @@ open http://localhost:3000
 Для ответа на эти вопросы нужны **логи**.
 
 ### Проблема: найти иголку в стоге сена
+
+![Health checks](../../resources/lectures/2025-spring/lec10/p14.png)
+
 
 UserService работает в 3 инстансах. Каждый обрабатывает сотни запросов в секунду. Пользователь жалуется: "Мой запрос упал".
 
@@ -1397,6 +1418,9 @@ UserService подключается к `localhost:5432` в development, но к
 
 Типичное приложение работает в нескольких окружениях:
 
+![Profiles](../../resources/lectures/2025-spring/lec10/p15.png)
+
+
 **Development (локально на ноутбуке)**:
 - База данных: H2 in-memory или PostgreSQL на localhost
 - Логи: DEBUG уровень, в консоль
@@ -1830,6 +1854,9 @@ UserService endpoint `GET /users/{id}` вызывается 1000 раз в се�
 1. Проверяем кэш
 2. Если данные есть (cache hit) → возвращаем из кэша (быстро)
 3. Если данных нет (cache miss) → запрос в БД → сохраняем в кэш → возвращаем (медленно, но следующий раз будет быстро)
+
+![Profiles](../../resources/lectures/2025-spring/lec10/p16.png)
+
 
 ### Cache hit vs Cache miss
 
@@ -2573,8 +2600,4 @@ Production-ready приложение — это не просто "работа
 
 👉 **Главный вывод**: Хороший код — это только 50% работы. Остальные 50% — это observability, операционная готовность и production practices.
 
----
 
-**Спасибо за внимание!**
-
-Вопросы?
