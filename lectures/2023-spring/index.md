@@ -18,6 +18,8 @@
 * [Лекция 9. Spring Framework. JPA. Hibernate](/lectures/2023-spring/lecture_09.html)
 * [Лекция 10. Filters and Interceptors. Spring Security. Authentication and authorization](/lectures/2023-spring/lecture_10.html)
 * [Лекция 11. Попытки посмотреть на фронтенд. JSP. Thymeleaf.](/lectures/2023-spring/lecture_11.html)
+* [Лекция 11. Thymeleaf. Jsp](/lectures/2024-spring/lecture_10.html)
+
 
 ## Условия домашек
 * [Домашка 9. Работа с базами данных](/lectures/2023-spring/task_09.html)
