@@ -26,9 +26,10 @@
 * [Лекция 8. Spring JPA. Hibernate. Jooq](/lectures/2024-spring/lecture_08_new.html)
 * [Лекция 9. Валидация. Filters and Interceptors. Spring Security. Authentication and authorization](/lectures/2024-spring/lecture_09.html)
 * [Лекция 10. Наблюдаемость и эксплуатация backend-сервисов](/lectures/2024-spring/lecture_10_new.html)
-* [Лекция 11. Distributed systems basics: как сервисы взаимодействуют](/lectures/2024-spring/lecture_13.html)
-* Лекция 12. CI/CD, деплой и runtime backend-сервисов
-* Лекция 13. Использование AI-агентов в разработке
+* [Лекция 11. Конфигурация и производительность backend-приложений](/lectures/2024-spring/lecture_11.html)
+* [Лекция 12. Distributed systems basics: как сервисы взаимодействуют](/lectures/2024-spring/lecture_13.html)
+* Лекция 13. CI/CD, деплой и runtime backend-сервисов
+* Лекция 14. Использование AI-агентов в разработке
 
 
 ### Условия домашек (осень)
