@@ -814,7 +814,10 @@ System.out.println(copy[0]);
 `int[][]` — массив, элементами которого являются ссылки на массивы `int`. Строки могут иметь разную длину:
 
 ```java
-int[][] measurements = {{18, 21}, {16, 24, 20}};
+int[][] measurements = {
+  {18, 21},
+  {16, 24, 20}
+};
 System.out.println(measurements.length);
 System.out.println(measurements[1].length);
 System.out.println(measurements[1][2]);
