@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="570" viewBox="0 0 1120 570" role="img" aria-labelledby="title desc">
+  <title id="title">Две переменные могут ссылаться на один объект Student</title>
+  <desc id="desc">Три состояния программы: после присваивания a и b указывают на один объект; изменение через b видно через a; после присваивания b значения null объект остаётся доступен через a.</desc>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#155799"/>
+      <stop offset="1" stop-color="#159957"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4b5563"/>
+    </marker>
+    <style>
+      .panel { fill:#fbfcfd; stroke:#d7dde3; stroke-width:1.5; rx:16; }
+      .step { font:600 18px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#202832; }
+      .code { font:15px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; fill:#374151; }
+      .label { font:16px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#202832; }
+      .small { font:14px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#5f6b76; }
+      .variable { fill:#fff; stroke:#77828c; stroke-width:1.5; rx:8; }
+      .object { fill:#fff; stroke:url(#accent); stroke-width:2.5; rx:12; }
+      .rule { stroke:#d7dde3; stroke-width:1; }
+      .ref { stroke:#4b5563; stroke-width:2; fill:none; marker-end:url(#arrow); }
+      .null { fill:#f3f4f6; stroke:#9ca3af; stroke-width:1.5; stroke-dasharray:5 4; rx:8; }
+    </style>
+  </defs>
+
+  <rect width="1120" height="570" fill="#ffffff"/>
+
+  <g transform="translate(30 28)">
+    <rect class="panel" width="330" height="490"/>
+    <text class="step" x="22" y="38">1. Присвоили ссылку</text>
+    <text class="code" x="22" y="68">Student b = a;</text>
+    <rect class="variable" x="28" y="124" width="96" height="48"/>
+    <text class="label" x="67" y="154" text-anchor="middle">a</text>
+    <rect class="variable" x="28" y="212" width="96" height="48"/>
+    <text class="label" x="67" y="242" text-anchor="middle">b</text>
+    <rect class="object" x="178" y="152" width="126" height="126"/>
+    <text class="label" x="241" y="181" text-anchor="middle">Student</text>
+    <line class="rule" x1="192" y1="193" x2="290" y2="193"/>
+    <text class="small" x="241" y="220" text-anchor="middle">grade = 4.0</text>
+    <text class="small" x="241" y="246" text-anchor="middle">expelled = false</text>
+    <path class="ref" d="M124 148 C150 148 150 176 178 176"/>
+    <path class="ref" d="M124 236 C150 236 150 252 178 252"/>
+    <text class="small" x="165" y="327" text-anchor="middle">Один объект, две ссылки</text>
+  </g>
+
+  <g transform="translate(395 28)">
+    <rect class="panel" width="330" height="490"/>
+    <text class="step" x="22" y="38">2. Изменили через b</text>
+    <text class="code" x="22" y="68">b.grade = 5.0;</text>
+    <rect class="variable" x="28" y="124" width="96" height="48"/>
+    <text class="label" x="67" y="154" text-anchor="middle">a</text>
+    <rect class="variable" x="28" y="212" width="96" height="48"/>
+    <text class="label" x="67" y="242" text-anchor="middle">b</text>
+    <rect class="object" x="178" y="152" width="126" height="126"/>
+    <text class="label" x="241" y="181" text-anchor="middle">Student</text>
+    <line class="rule" x1="192" y1="193" x2="290" y2="193"/>
+    <rect x="190" y="201" width="102" height="28" rx="6" fill="url(#accent)" opacity="0.13"/>
+    <text class="small" x="241" y="220" text-anchor="middle">grade = 5.0</text>
+    <text class="small" x="241" y="246" text-anchor="middle">expelled = false</text>
+    <path class="ref" d="M124 148 C150 148 150 176 178 176"/>
+    <path class="ref" d="M124 236 C150 236 150 252 178 252"/>
+    <text class="small" x="165" y="327" text-anchor="middle">a.grade тоже равно 5.0</text>
+  </g>
+
+  <g transform="translate(760 28)">
+    <rect class="panel" width="330" height="490"/>
+    <text class="step" x="22" y="38">3. Переназначили b</text>
+    <text class="code" x="22" y="68">b = null;</text>
+    <rect class="variable" x="28" y="124" width="96" height="48"/>
+    <text class="label" x="67" y="154" text-anchor="middle">a</text>
+    <rect class="variable" x="28" y="212" width="96" height="48"/>
+    <text class="label" x="67" y="242" text-anchor="middle">b</text>
+    <rect class="null" x="177" y="222" width="106" height="42"/>
+    <text class="code" x="230" y="248" text-anchor="middle">null</text>
+    <rect class="object" x="178" y="92" width="126" height="110"/>
+    <text class="label" x="241" y="121" text-anchor="middle">Student</text>
+    <line class="rule" x1="192" y1="133" x2="290" y2="133"/>
+    <text class="small" x="241" y="160" text-anchor="middle">grade = 5.0</text>
+    <text class="small" x="241" y="184" text-anchor="middle">expelled = false</text>
+    <path class="ref" d="M124 148 C148 148 153 148 178 148"/>
+    <path class="ref" d="M124 236 C147 236 153 242 177 242"/>
+    <text class="small" x="165" y="327" text-anchor="middle">Объект всё ещё доступен через a</text>
+    <text class="small" x="165" y="353" text-anchor="middle">Вызов через b завершится NPE</text>
+  </g>
+
+  <text class="small" x="560" y="552" text-anchor="middle">Схема показывает связи между переменными и объектом, но не задаёт конкретное размещение данных в памяти JVM.</text>
+</svg>

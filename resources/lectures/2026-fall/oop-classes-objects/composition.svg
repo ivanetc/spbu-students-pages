@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="430" viewBox="0 0 1120 430" role="img" aria-labelledby="title desc">
+  <title id="title">Композиция Student и UniversityGroup</title>
+  <desc id="desc">Переменная ivan ссылается на объект Student. Поле group объекта Student хранит ссылку на отдельный объект UniversityGroup.</desc>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#155799"/>
+      <stop offset="1" stop-color="#159957"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#4b5563"/>
+    </marker>
+    <style>
+      .label { font:17px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#202832; }
+      .title { font:600 20px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#202832; }
+      .small { font:15px system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; fill:#5f6b76; }
+      .code { font:15px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; fill:#374151; }
+      .variable { fill:#fbfcfd; stroke:#77828c; stroke-width:1.5; rx:9; }
+      .object { fill:#fff; stroke:url(#accent); stroke-width:2.5; rx:14; }
+      .group { fill:#fff; stroke:#77828c; stroke-width:1.8; rx:14; }
+      .rule { stroke:#d7dde3; stroke-width:1; }
+      .ref { stroke:#4b5563; stroke-width:2.2; fill:none; marker-end:url(#arrow); }
+    </style>
+  </defs>
+
+  <rect width="1120" height="430" fill="#fff"/>
+  <text class="title" x="560" y="42" text-anchor="middle">Student хранит ссылку на отдельный объект UniversityGroup</text>
+
+  <rect class="variable" x="70" y="177" width="126" height="58"/>
+  <text class="label" x="133" y="212" text-anchor="middle">ivan</text>
+
+  <rect class="object" x="330" y="91" width="276" height="230"/>
+  <text class="title" x="468" y="127" text-anchor="middle">Student</text>
+  <line class="rule" x1="350" y1="143" x2="586" y2="143"/>
+  <text class="code" x="360" y="176">name = "Иван Петров"</text>
+  <text class="code" x="360" y="207">grade = 4.5</text>
+  <text class="code" x="360" y="238">expelled = false</text>
+  <rect x="350" y="257" width="236" height="43" rx="8" fill="url(#accent)" opacity="0.12"/>
+  <text class="code" x="360" y="284">group = ссылка</text>
+
+  <rect class="group" x="762" y="137" width="284" height="138"/>
+  <text class="title" x="904" y="174" text-anchor="middle">UniversityGroup</text>
+  <line class="rule" x1="782" y1="190" x2="1026" y2="190"/>
+  <text class="code" x="904" y="228" text-anchor="middle">name = "24.Б11-мм"</text>
+
+  <path class="ref" d="M196 206 C244 206 274 206 330 206"/>
+  <text class="small" x="260" y="188" text-anchor="middle">ссылка</text>
+  <path class="ref" d="M586 279 C662 279 678 206 762 206"/>
+  <text class="small" x="679" y="247" text-anchor="middle">HAS-A</text>
+
+  <text class="small" x="560" y="382" text-anchor="middle">Это два объекта. Поле group содержит ссылку; оно не «вкладывает» весь объект группы внутрь Student.</text>
+</svg>
