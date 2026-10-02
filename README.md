@@ -4,8 +4,9 @@
 ### Осенний семестр. Основы java
 * [Лекция 1. Вводная о курсе, Git и основы синтаксиса Java](/lectures/autumn/lecture_01.html)
 * [Лекция 2. Классы, объекты и инкапсуляция](/lectures/autumn/lecture_02.html)
-* [Лекция 3. Основы ООП (Объектно-ориентированное программирование) в Java](/lectures/2023-fall/lecture_03.html)
-* [Лекция 4. Основы ООП. Наследование. Интерфейсы](/lectures/2023-fall/lecture_04.html)
+* [Лекция 3. Абстракции, интерфейсы, наследование и полиморфизм](/lectures/autumn/lecture_03.html)
+
+
 * [Лекция 5. Основы ООП. Абстрактный класс. Анонимный класс. Принципы SOLID](/lectures/2023-fall/lecture_05.html)
 * [Лекция 6. Класс Object. Класс String. Регулярные выражения.](/lectures/2023-fall/lecture_06.html)
 * [Лекция 7. Generics. Классы-обертки над примитивными типами. Optional.](/lectures/2023-fall/lecture_07.html)

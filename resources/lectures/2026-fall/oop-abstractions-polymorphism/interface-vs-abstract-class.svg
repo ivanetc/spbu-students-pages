@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="610" viewBox="0 0 1120 610" role="img" aria-labelledby="title desc">
+  <title id="title">CourseParticipant и abstract User решают разные задачи</title>
+  <desc id="desc">Интерфейс CourseParticipant задаёт клиентскую роль для Student, Teacher и Guest. Абстрактный класс User даёт Student и Teacher общие состояние и реализацию.</desc>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#155799"/><stop offset="1" stop-color="#159957"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#4b5563"/></marker>
+    <marker id="openArrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto"><path d="M1,1 L10,6 L1,11 z" fill="#fff" stroke="#69737d" stroke-width="1.4"/></marker>
+    <style>.heading{font:600 20px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#202832}.section{font:600 17px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#202832}.label{font:600 16px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#202832}.small{font:14px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#5f6b76}.code{font:14px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;fill:#374151}.panel{fill:#fbfcfd;stroke:#d7dde3;stroke-width:1.5;rx:16}.contract{fill:#fff;stroke:url(#accent);stroke-width:2.8;rx:13}.base{fill:#fff;stroke:#77828c;stroke-width:1.9;rx:13}.type{fill:#fff;stroke:#9aa3ab;stroke-width:1.5;rx:10}.use{fill:none;stroke:#4b5563;stroke-width:2;marker-end:url(#arrow)}.impl{fill:none;stroke:#69737d;stroke-width:1.7;stroke-dasharray:6 5;marker-end:url(#openArrow)}.inherit{fill:none;stroke:#69737d;stroke-width:1.9;marker-end:url(#openArrow)}.rule{stroke:#d7dde3;stroke-width:1}</style>
+  </defs>
+  <rect width="1120" height="610" fill="#fff"/>
+  <text class="heading" x="560" y="38" text-anchor="middle">Два вопроса одной модели</text>
+
+  <rect class="panel" x="36" y="66" width="516" height="470"/>
+  <text class="section" x="294" y="99" text-anchor="middle">Какой контракт видит клиент?</text>
+  <rect class="type" x="72" y="136" width="144" height="62"/><text class="label" x="144" y="173" text-anchor="middle">Course</text>
+  <rect class="contract" x="286" y="119" width="230" height="96"/>
+  <text class="small" x="401" y="147" text-anchor="middle">interface</text><text class="label" x="401" y="174" text-anchor="middle">CourseParticipant</text><text class="code" x="401" y="198" text-anchor="middle">receiveMessage(...)</text>
+  <path class="use" d="M216 167 L286 167"/>
+
+  <rect class="type" x="76" y="350" width="128" height="64"/><text class="label" x="140" y="388" text-anchor="middle">Student</text>
+  <rect class="type" x="228" y="350" width="128" height="64"/><text class="label" x="292" y="388" text-anchor="middle">Teacher</text>
+  <rect class="type" x="380" y="350" width="128" height="64"/><text class="label" x="444" y="388" text-anchor="middle">Guest</text>
+  <path class="impl" d="M140 350 C140 281 310 282 350 215"/><path class="impl" d="M292 350 C292 282 360 270 382 215"/><path class="impl" d="M444 350 C444 281 434 258 416 215"/>
+  <text class="small" x="294" y="458" text-anchor="middle">разные классы играют одну клиентскую роль</text>
+
+  <rect class="panel" x="568" y="66" width="516" height="470"/>
+  <text class="section" x="826" y="99" text-anchor="middle">Что разделяет тесное семейство?</text>
+  <rect class="base" x="697" y="119" width="258" height="126"/>
+  <text class="small" x="826" y="147" text-anchor="middle">abstract class</text><text class="label" x="826" y="175" text-anchor="middle">User</text><line class="rule" x1="720" y1="190" x2="932" y2="190"/><text class="code" x="826" y="215" text-anchor="middle">id, name</text><text class="code" x="826" y="236" text-anchor="middle">abstract getRoleName()</text>
+  <rect class="type" x="648" y="350" width="150" height="64"/><text class="label" x="723" y="388" text-anchor="middle">Student</text>
+  <rect class="type" x="854" y="350" width="150" height="64"/><text class="label" x="929" y="388" text-anchor="middle">Teacher</text>
+  <path class="inherit" d="M723 350 C723 300 766 280 793 245"/><path class="inherit" d="M929 350 C929 300 887 280 859 245"/>
+  <text class="small" x="826" y="458" text-anchor="middle">общие state, constructor и implementation</text>
+  <text class="small" x="826" y="488" text-anchor="middle">Guest в это семейство не входит</text>
+
+  <rect x="344" y="552" width="432" height="38" rx="9" fill="url(#accent)" opacity="0.11"/>
+  <text class="small" x="560" y="577" text-anchor="middle">Student одновременно extends User и implements CourseParticipant</text>
+</svg>

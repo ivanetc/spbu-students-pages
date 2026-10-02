@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="540" viewBox="0 0 1120 540" role="img" aria-labelledby="title desc">
+  <title id="title">Различие отношений IS-A и HAS-A</title>
+  <desc id="desc">Student является подтипом User, но объект Student лишь хранит ссылку на отдельный объект UniversityGroup в поле group.</desc>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#155799"/><stop offset="1" stop-color="#159957"/></linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L0,6 L9,3 z" fill="#4b5563"/></marker>
+    <marker id="openArrow" markerWidth="13" markerHeight="13" refX="11" refY="6.5" orient="auto"><path d="M1,1 L11,6.5 L1,12 z" fill="#fff" stroke="#69737d" stroke-width="1.5"/></marker>
+    <style>.heading{font:600 20px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#202832}.section{font:600 18px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#202832}.label{font:600 17px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#202832}.small{font:14px system-ui,-apple-system,"Segoe UI",sans-serif;fill:#5f6b76}.code{font:14px ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;fill:#374151}.panel{fill:#fbfcfd;stroke:#d7dde3;stroke-width:1.5;rx:16}.type{fill:#fff;stroke:#77828c;stroke-width:1.8;rx:12}.student{fill:#fff;stroke:url(#accent);stroke-width:2.8;rx:13}.object{fill:#fff;stroke:#77828c;stroke-width:1.8;rx:13}.isa{fill:none;stroke:#69737d;stroke-width:2;stroke-dasharray:7 5;marker-end:url(#openArrow)}.hasa{fill:none;stroke:#4b5563;stroke-width:2.2;marker-end:url(#arrow)}.rule{stroke:#d7dde3;stroke-width:1}</style>
+  </defs>
+  <rect width="1120" height="540" fill="#fff"/>
+  <text class="heading" x="560" y="38" text-anchor="middle">Один Student — две принципиально разные связи</text>
+
+  <rect class="panel" x="44" y="70" width="486" height="406"/>
+  <text class="section" x="287" y="106" text-anchor="middle">IS-A: отношение между типами</text>
+  <rect class="type" x="168" y="138" width="238" height="82"/>
+  <text class="small" x="287" y="165" text-anchor="middle">superclass</text><text class="label" x="287" y="195" text-anchor="middle">User</text>
+  <rect class="student" x="168" y="322" width="238" height="82"/>
+  <text class="small" x="287" y="349" text-anchor="middle">subclass</text><text class="label" x="287" y="379" text-anchor="middle">Student</text>
+  <path class="isa" d="M287 322 L287 220"/>
+  <text class="small" x="314" y="274">extends / subtype</text>
+  <text class="small" x="287" y="443" text-anchor="middle">Student можно использовать как User</text>
+
+  <rect class="panel" x="590" y="70" width="486" height="406"/>
+  <text class="section" x="833" y="106" text-anchor="middle">HAS-A: ссылка между объектами</text>
+  <rect class="student" x="624" y="157" width="202" height="210"/>
+  <text class="small" x="725" y="185" text-anchor="middle">объект</text><text class="label" x="725" y="214" text-anchor="middle">Student</text><line class="rule" x1="646" y1="231" x2="804" y2="231"/><text class="code" x="648" y="266">name = "Иван"</text><rect x="646" y="286" width="158" height="45" rx="7" fill="url(#accent)" opacity="0.12"/><text class="code" x="648" y="315">group = ссылка</text>
+  <rect class="object" x="876" y="202" width="166" height="120"/>
+  <text class="small" x="959" y="231" text-anchor="middle">отдельный объект</text><text class="label" x="959" y="260" text-anchor="middle">UniversityGroup</text><line class="rule" x1="895" y1="276" x2="1023" y2="276"/><text class="code" x="959" y="302" text-anchor="middle">24.Б11-мм</text>
+  <path class="hasa" d="M804 309 C836 309 842 262 876 262"/>
+  <text class="small" x="849" y="294" text-anchor="middle">HAS-A</text>
+  <text class="small" x="833" y="443" text-anchor="middle">поле хранит ссылку, объекты не сливаются</text>
+
+  <g transform="translate(318 510)"><line class="isa" x1="0" y1="0" x2="45" y2="0"/><text class="small" x="58" y="5">type relation</text><line class="hasa" x1="216" y1="0" x2="261" y2="0"/><text class="small" x="276" y="5">object reference</text></g>
+</svg>
