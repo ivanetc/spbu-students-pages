@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="520" viewBox="0 0 1120 520" role="img" aria-labelledby="title desc">
+  <title id="title">Ссылочная идентичность, логическое равенство и hash code двух групп</title>
+  <desc id="desc">Переменные first и second ссылаются на два разных объекта UniversityGroup с одинаковым именем. Ссылки не идентичны, объекты логически равны и имеют одинаковый hash code, поэтому HashSet видит один логический элемент.</desc>
+  <defs>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#155799"/>
+      <stop offset="1" stop-color="#159957"/>
+    </linearGradient>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#59636e"/>
+    </marker>
+    <marker id="accent-arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#157d79"/>
+    </marker>
+    <style>
+      .text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; fill: #26323d; }
+      .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; fill: #26323d; }
+      .muted { fill: #65717d; }
+      .box { fill: #ffffff; stroke: #aeb8c2; stroke-width: 2; }
+      .soft { fill: #f7f9fb; stroke: #c8d0d8; stroke-width: 2; }
+      .accent-box { fill: #f3faf8; stroke: #157d79; stroke-width: 2.5; }
+    </style>
+  </defs>
+
+  <rect width="1120" height="520" fill="#fbfcfd"/>
+
+  <text class="text" x="40" y="42" font-size="22" font-weight="650">Два объекта с одинаковыми данными</text>
+  <text class="text muted" x="40" y="70" font-size="15">Identity отвечает «тот же объект?», equality — «то же значение по контракту модели?»</text>
+
+  <rect class="soft" x="44" y="116" width="170" height="64" rx="12"/>
+  <text class="mono" x="72" y="154" font-size="20">first</text>
+  <line x1="214" y1="148" x2="292" y2="148" stroke="#59636e" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect class="box" x="300" y="94" width="330" height="108" rx="14"/>
+  <rect x="300" y="94" width="10" height="108" rx="5" fill="url(#accent)"/>
+  <text class="mono" x="332" y="130" font-size="18" font-weight="650">UniversityGroup</text>
+  <text class="mono" x="332" y="166" font-size="17">name = "24.Б11-мм"</text>
+  <text class="text muted" x="546" y="188" font-size="13">объект 1</text>
+
+  <rect class="soft" x="44" y="314" width="170" height="64" rx="12"/>
+  <text class="mono" x="72" y="352" font-size="20">second</text>
+  <line x1="214" y1="346" x2="292" y2="346" stroke="#59636e" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <rect class="box" x="300" y="292" width="330" height="108" rx="14"/>
+  <rect x="300" y="292" width="10" height="108" rx="5" fill="url(#accent)"/>
+  <text class="mono" x="332" y="328" font-size="18" font-weight="650">UniversityGroup</text>
+  <text class="mono" x="332" y="364" font-size="17">name = "24.Б11-мм"</text>
+  <text class="text muted" x="546" y="386" font-size="13">объект 2</text>
+
+  <rect x="654" y="96" width="238" height="54" rx="12" fill="#fff6f3" stroke="#d98972" stroke-width="2"/>
+  <text class="mono" x="673" y="130" font-size="15">first == second → false</text>
+
+  <rect class="accent-box" x="654" y="168" width="238" height="54" rx="12"/>
+  <text class="mono" x="669" y="202" font-size="14.5">first.equals(second) → true</text>
+
+  <rect class="accent-box" x="654" y="240" width="238" height="54" rx="12"/>
+  <text class="mono" x="671" y="274" font-size="14.5">hash(first) == hash(second)</text>
+
+  <path d="M 630 148 C 644 148, 644 123, 654 123" fill="none" stroke="#59636e" stroke-width="2"/>
+  <path d="M 630 346 C 642 346, 642 136, 654 123" fill="none" stroke="#59636e" stroke-width="2"/>
+  <path d="M 630 148 C 642 148, 642 195, 654 195" fill="none" stroke="#157d79" stroke-width="2"/>
+  <path d="M 630 346 C 642 346, 642 211, 654 195" fill="none" stroke="#157d79" stroke-width="2"/>
+  <path d="M 630 148 C 642 148, 642 267, 654 267" fill="none" stroke="#157d79" stroke-width="2"/>
+  <path d="M 630 346 C 642 346, 642 283, 654 267" fill="none" stroke="#157d79" stroke-width="2"/>
+
+  <rect class="accent-box" x="925" y="143" width="164" height="172" rx="18"/>
+  <text class="text" x="948" y="178" font-size="16" font-weight="650">Будущий HashSet</text>
+  <text class="text muted" x="947" y="201" font-size="12.5">концептуальный preview</text>
+  <rect x="953" y="226" width="108" height="58" rx="12" fill="url(#accent)"/>
+  <text x="970" y="251" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" fill="#ffffff" font-size="13">24.Б11-мм</text>
+  <text x="986" y="271" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" fill="#ffffff" font-size="12">1 элемент</text>
+
+  <path d="M 892 195 C 904 195, 904 218, 925 229" fill="none" stroke="#157d79" stroke-width="2.5" marker-end="url(#accent-arrow)"/>
+  <path d="M 892 267 C 904 267, 904 244, 925 232" fill="none" stroke="#157d79" stroke-width="2.5" marker-end="url(#accent-arrow)"/>
+
+  <line x1="44" y1="444" x2="1076" y2="444" stroke="#d8dee4" stroke-width="1.5"/>
+  <rect x="44" y="467" width="18" height="18" rx="4" fill="#ffffff" stroke="#aeb8c2" stroke-width="2"/>
+  <text class="text muted" x="72" y="481" font-size="14">отдельная рамка — отдельный объект</text>
+  <rect x="380" y="467" width="18" height="18" rx="4" fill="#f3faf8" stroke="#157d79" stroke-width="2"/>
+  <text class="text muted" x="408" y="481" font-size="14">акцент — контракт равенства и его клиент</text>
+  <text class="text muted" x="808" y="481" font-size="14">Адреса памяти не показаны</text>
+</svg>
