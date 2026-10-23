@@ -7,6 +7,7 @@
 * [Лекция 3. Абстракции, интерфейсы, наследование и полиморфизм](/lectures/autumn/lecture_03.html)
 * [Лекция 4. Класс Object, идентичность, равенство и hashCode](/lectures/autumn/lecture_04.html)
 * [Лекция 5. Класс String. Регулярные выражения. Generics. Классы-обертки над примитивными типами. Optional.](/lectures/autumn/lecture_05.html)
+* [Лекция 6. Организация Java-программы, типы данных и Collections Framework](/lectures/autumn/lecture_06.html)
 * [Лекция 8. Collections. Lambda-выражения. Stream](/lectures/2023-fall/lecture_08.html)
 * [Лекция 9. Исключения. Работа с файлами](/lectures/2023-fall/lecture_09.html)
 * [Лекция 10. Компиляция Java-программы, устройство памяти JVM и Garbage Collector](/lectures/2023-fall/lecture_10.html)
