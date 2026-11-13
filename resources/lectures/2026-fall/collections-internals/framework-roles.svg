@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1240" height="540" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1240 540" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1240" height="540"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-540)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1240" height="540" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,99%); fill-rule: evenodd;"/>
+			<rect x="32" y="480" width="6" height="30" rx="3" ry="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<text x="52" y="489" style="font-family: ArialBold; font-size: 25px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,978) scale(1,-1)">Какие задачи возникли с университетскими данными?</text>
+			<text x="42" y="25" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,50) scale(1,-1)">Вопросы сформулированы до выбора интерфейса и реализации.</text>
+			<rect x="410" y="363" width="420" height="62" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="469.3408203125" y="387.0" style="font-family: ArialBold; font-size: 22px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,774) scale(1,-1)">Студенты · группы · заявки</text>
+			<rect x="40" y="100" width="260" height="175" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="82.7001953125" y="234" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,468) scale(1,-1)">Запись на занятие</text>
+			<text x="76.9609375" y="192" style="font-family: Arial; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,384) scale(1,-1)">Иван записался дважды.</text>
+			<text x="73.7890625" y="164" style="font-family: Arial; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,328) scale(1,-1)">Как сохранить обе записи</text>
+			<text x="117.98828125" y="136" style="font-family: Arial; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,272) scale(1,-1)">и их порядок?</text>
+			<path d="M 620,363 L 170,275 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="170 275, 178.0095 280.9873, 179.6749 272.471" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<rect x="340" y="100" width="260" height="175" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="382.732666015625" y="234" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,468) scale(1,-1)">Группы студентов</text>
+			<text x="363.5234375" y="192" style="font-family: Arial; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,384) scale(1,-1)">Иван и Анна в одной группе.</text>
+			<text x="392.296875" y="164" style="font-family: Arial; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,328) scale(1,-1)">Как показать каждую</text>
+			<text x="399.609375" y="136" style="font-family: Arial; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,272) scale(1,-1)">группу только раз?</text>
+			<path d="M 620,363 L 470,275 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="470 275, 475.5756 283.3014, 479.9666 275.8167" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<rect x="640" y="100" width="260" height="175" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="715.1708984375" y="234" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,468) scale(1,-1)">Поиск по ID</text>
+			<text x="704.8515625" y="192" style="font-family: Arial; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,384) scale(1,-1)">Есть ID студента.</text>
+			<text x="685.2578125" y="164" style="font-family: Arial; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,328) scale(1,-1)">Как найти его карточку</text>
+			<text x="683.11328125" y="136" style="font-family: Arial; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,272) scale(1,-1)">без полного перебора?</text>
+			<path d="M 620,363 L 770,275 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="770 275, 760.0334 275.8167, 764.4244 283.3014" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<rect x="940" y="100" width="260" height="175" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="994.26904296875" y="234" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,468) scale(1,-1)">Очередь заявок</text>
+			<text x="965.19921875" y="192" style="font-family: Arial; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,384) scale(1,-1)">Заявки идут одна за другой.</text>
+			<text x="1002.26171875" y="164" style="font-family: Arial; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,328) scale(1,-1)">Какую обработать</text>
+			<text x="1022.265625" y="136" style="font-family: Arial; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,272) scale(1,-1)">следующей?</text>
+			<path d="M 620,363 L 1070,275 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="1070 275, 1060.325 272.471, 1061.991 280.9873" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+		</g>
+	</g>
+</svg>

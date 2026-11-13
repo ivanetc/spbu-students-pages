@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="2000" height="1220" preserveAspectRatio="xMinYMin meet" viewBox="0 0 2000 1220" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="2000" height="1220"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-1220)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="2000" height="1220" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,99%); fill-rule: evenodd;"/>
+			<rect x="32" y="1160" width="6" height="30" rx="3" ry="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<text x="52" y="1169" style="font-family: ArialBold; font-size: 25px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,2338) scale(1,-1)">Контракты и реализации Java 21</text>
+			<rect x="55" y="1105" width="28" height="23" rx="5" ry="5" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 2; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="95" y="1109" style="font-family: Arial; font-size: 18px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,2218) scale(1,-1)">интерфейс</text>
+			<rect x="405" y="1105" width="28" height="23" rx="5" ry="5" style="stroke: rgb(72%,51%,18%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,97%,92%); fill-rule: evenodd; stroke-dasharray: 4, 3;"/>
+			<text x="445" y="1109" style="font-family: Arial; font-size: 18px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,2218) scale(1,-1)">абстрактный класс</text>
+			<rect x="905" y="1105" width="28" height="23" rx="5" ry="5" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="945" y="1109" style="font-family: Arial; font-size: 18px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,2218) scale(1,-1)">конкретный класс</text>
+			<rect x="1380" y="1105" width="28" height="23" rx="5" ry="5" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="1420" y="1109" style="font-family: Arial; font-size: 18px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,2218) scale(1,-1)">legacy (конкретный класс)</text>
+			<rect x="850" y="993" width="300" height="72" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="940.68701171875" y="1033" style="font-family: ArialBold; font-size: 22px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,2066) scale(1,-1)">Iterable&lt;E&gt;</text>
+			<text x="967.88427734375" y="1003" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,2006) scale(1,-1)">iterator()</text>
+			<rect x="850" y="864" width="300" height="96" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="926.64697265625" y="928" style="font-family: ArialBold; font-size: 22px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1856) scale(1,-1)">Collection&lt;E&gt;</text>
+			<text x="936.42578125" y="898" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,1796) scale(1,-1)">size(), contains(e)</text>
+			<text x="935.9765625" y="877" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,1754) scale(1,-1)">add(e), remove(e)</text>
+			<rect x="110" y="725" width="300" height="90" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="222.69775390625" y="783" style="font-family: ArialBold; font-size: 22px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1566) scale(1,-1)">Set&lt;E&gt;</text>
+			<text x="192.85546875" y="753" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,1506) scale(1,-1)">add(e), contains(e)</text>
+			<text x="175.77734375" y="732" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,1464) scale(1,-1)">нет равных элементов</text>
+			<rect x="720" y="719" width="370" height="96" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="784.9658203125" y="783" style="font-family: ArialBold; font-size: 20px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1566) scale(1,-1)">SequencedCollection&lt;E&gt;</text>
+			<text x="836.984375" y="753" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,1506) scale(1,-1)">getFirst(), getLast()</text>
+			<text x="868.546875" y="732" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,1464) scale(1,-1)">reversed()</text>
+			<rect x="1300" y="735" width="300" height="80" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="1395.58544921875" y="783" style="font-family: ArialBold; font-size: 22px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1566) scale(1,-1)">Queue&lt;E&gt;</text>
+			<text x="1374.8671875" y="753" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,1506) scale(1,-1)">offer(e), poll(), peek()</text>
+			<rect x="1690" y="864" width="280" height="96" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="1776.8154296875" y="928" style="font-family: ArialBold; font-size: 22px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1856) scale(1,-1)">Map&lt;K,V&gt;</text>
+			<text x="1778.43359375" y="898" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,1796) scale(1,-1)">get(k), put(k,v)</text>
+			<text x="1737.5234375" y="877" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,1754) scale(1,-1)">containsKey(k), entrySet()</text>
+			<rect x="110" y="600" width="300" height="75" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="172.7392578125" y="643" style="font-family: ArialBold; font-size: 20px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1286) scale(1,-1)">SequencedSet&lt;E&gt;</text>
+			<text x="184.25" y="613" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,1226) scale(1,-1)">порядок + reversed()</text>
+			<rect x="750" y="600" width="310" height="75" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="865.25927734375" y="643" style="font-family: ArialBold; font-size: 22px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1286) scale(1,-1)">List&lt;E&gt;</text>
+			<text x="826.30859375" y="613" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,1226) scale(1,-1)">get(i), set(i,e), add(i,e)</text>
+			<rect x="1295" y="600" width="310" height="75" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="1396.19775390625" y="643" style="font-family: ArialBold; font-size: 22px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1286) scale(1,-1)">Deque&lt;E&gt;</text>
+			<text x="1371.31640625" y="613" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,1226) scale(1,-1)">offerFirst(e), pollLast()</text>
+			<rect x="1690" y="735" width="280" height="80" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="1728.30078125" y="783" style="font-family: ArialBold; font-size: 20px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1566) scale(1,-1)">SequencedMap&lt;K,V&gt;</text>
+			<text x="1752.21484375" y="753" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,1506) scale(1,-1)">firstEntry(), reversed()</text>
+			<path d="M 1000,993 L 1000,960 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="1000 960, 995.6612 969.0097, 1004.339 969.0097" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<path d="M 905,864 L 260,815 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="260 815, 268.6551 820.0089, 269.3125 811.3561" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<path d="M 1000,864 L 905,815 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="905 815, 911.0184 822.9862, 914.9962 815.274" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<path d="M 1095,864 L 1450,815 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="1450 815, 1440.482 811.9338, 1441.668 820.53" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<path d="M 260,725 L 260,675 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="260 675, 255.6612 684.0097, 264.3388 684.0097" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<path d="M 815,719 L 395,675 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="395 675, 403.5086 680.254, 404.4127 671.6235" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<path d="M 905,719 L 905,675 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="905 675, 900.6612 684.0097, 909.3388 684.0097" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<path d="M 1000,719 L 1370,675 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="1370 675, 1360.541 671.7554, 1361.566 680.3724" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<path d="M 1450,735 L 1450,675 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="1450 675, 1445.661 684.0097, 1454.339 684.0097" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<path d="M 1830,864 L 1830,815 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="1830 815, 1825.661 824.0097, 1834.339 824.0097" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<rect x="110" y="476" width="300" height="64" rx="10" ry="10" style="stroke: rgb(72%,51%,18%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,97%,92%); fill-rule: evenodd; stroke-dasharray: 6, 4;"/>
+			<text x="189.246337890625" y="501" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1002) scale(1,-1)">AbstractSet&lt;E&gt;</text>
+			<rect x="750" y="476" width="310" height="64" rx="10" ry="10" style="stroke: rgb(72%,51%,18%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,97%,92%); fill-rule: evenodd; stroke-dasharray: 6, 4;"/>
+			<text x="832.140380859375" y="501" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1002) scale(1,-1)">AbstractList&lt;E&gt;</text>
+			<rect x="1180" y="476" width="270" height="64" rx="10" ry="10" style="stroke: rgb(72%,51%,18%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,97%,92%); fill-rule: evenodd; stroke-dasharray: 6, 4;"/>
+			<text x="1229.467529296875" y="501" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1002) scale(1,-1)">AbstractQueue&lt;E&gt;</text>
+			<rect x="1460" y="476" width="210" height="64" rx="10" ry="10" style="stroke: rgb(72%,51%,18%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,97%,92%); fill-rule: evenodd; stroke-dasharray: 6, 4;"/>
+			<text x="1489.92431640625" y="501" style="font-family: ArialBold; font-size: 14px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1002) scale(1,-1)">AbstractCollection&lt;E&gt;</text>
+			<rect x="1690" y="476" width="280" height="64" rx="10" ry="10" style="stroke: rgb(72%,51%,18%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,97%,92%); fill-rule: evenodd; stroke-dasharray: 6, 4;"/>
+			<text x="1745.52978515625" y="501" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1002) scale(1,-1)">AbstractMap&lt;K,V&gt;</text>
+			<path d="M 110,775 L 75,775 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<path d="M 75,775 L 75,508 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<path d="M 75,508 L 110,508 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<polygon points="110 508, 100.9955 503.6503, 100.9955 512.3497" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,67%,70%); fill-rule: evenodd;"/>
+			<path d="M 905,600 L 905,540 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<polygon points="905 540, 900.6503 549.0045, 909.3497 549.0045" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,67%,70%); fill-rule: evenodd;"/>
+			<path d="M 1300,775 L 1155,775 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<path d="M 1155,775 L 1155,508 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<path d="M 1155,508 L 1180,508 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<polygon points="1180 508, 1170.996 503.6503, 1170.996 512.3497" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,67%,70%); fill-rule: evenodd;"/>
+			<path d="M 1690,912 L 1670,912 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<path d="M 1670,912 L 1670,508 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<path d="M 1670,508 L 1690,508 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<polygon points="1690 508, 1680.996 503.6503, 1680.996 512.3497" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,67%,70%); fill-rule: evenodd;"/>
+			<rect x="85" y="315" width="150" height="55" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="123.98681640625" y="335.5" style="font-family: ArialBold; font-size: 18px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,671) scale(1,-1)">HashSet</text>
+			<rect x="255" y="315" width="170" height="55" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="308.818115234375" y="335.5" style="font-family: ArialBold; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,671) scale(1,-1)">TreeSet</text>
+			<rect x="85" y="180" width="200" height="55" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="123.594970703125" y="200.5" style="font-family: ArialBold; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,401) scale(1,-1)">LinkedHashSet</text>
+			<path d="M 190,476 L 160,370 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="160 370, 158.2787 379.8507, 166.6284 377.4876" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 330,476 L 340,370 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="340 370, 334.8341 378.5623, 343.4734 379.3774" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 160,315 L 160,235 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="160 235, 155.6612 244.0097, 164.3388 244.0097" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<rect x="620" y="315" width="135" height="55" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="650.1796875" y="335.5" style="font-family: ArialBold; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,671) scale(1,-1)">ArrayList</text>
+			<rect x="770" y="311" width="175" height="64" rx="10" ry="10" style="stroke: rgb(72%,51%,18%); stroke-linecap: butt; stroke-width: 2; fill: rgb(100%,97%,92%); fill-rule: evenodd; stroke-dasharray: 6, 4;"/>
+			<text x="781.26220703125" y="336" style="font-family: ArialBold; font-size: 14px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,672) scale(1,-1)">AbstractSequentialList</text>
+			<rect x="960" y="315" width="130" height="55" rx="10" ry="10" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="998.54541015625" y="335.5" style="font-family: ArialBold; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,671) scale(1,-1)">Vector</text>
+			<rect x="1022" y="360" width="66" height="23" rx="10" ry="10" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="1036.3203125" y="364.5" style="font-family: ArialBold; font-size: 12px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,729) scale(1,-1)">legacy</text>
+			<rect x="770" y="180" width="175" height="55" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="814.995849609375" y="200.5" style="font-family: ArialBold; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,401) scale(1,-1)">LinkedList</text>
+			<rect x="960" y="180" width="130" height="55" rx="10" ry="10" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="1002.318115234375" y="200.5" style="font-family: ArialBold; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,401) scale(1,-1)">Stack</text>
+			<rect x="1022" y="225" width="66" height="23" rx="10" ry="10" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="1036.3203125" y="229.5" style="font-family: ArialBold; font-size: 12px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,459) scale(1,-1)">legacy</text>
+			<path d="M 825,476 L 688,370 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="688 370, 692.4707 378.945, 697.7809 372.0818" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 905,476 L 858,375 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="858 375, 857.8674 384.9991, 865.735 381.338" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 1000,476 L 1025,370 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="1025 370, 1018.709 377.7731, 1027.155 379.7651" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 858,311 L 858,235 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="858 235, 853.6612 244.0097, 862.3388 244.0097" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 1025,315 L 1025,235 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="1025 235, 1020.661 244.0097, 1029.339 244.0097" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<rect x="1180" y="315" width="190" height="55" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="1218.791259765625" y="335.5" style="font-family: ArialBold; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,671) scale(1,-1)">PriorityQueue</text>
+			<rect x="1400" y="315" width="220" height="55" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="1461.81396484375" y="335.5" style="font-family: ArialBold; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,671) scale(1,-1)">ArrayDeque</text>
+			<rect x="1290" y="180" width="190" height="55" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="1342.495849609375" y="200.5" style="font-family: ArialBold; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,401) scale(1,-1)">LinkedList</text>
+			<path d="M 1315,476 L 1275,370 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="1275 370, 1274.122 379.9613, 1282.24 376.8976" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 1565,476 L 1510,370 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="1510 370, 1510.298 379.9956, 1518.001 375.9989" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 1605,635 L 1650,635 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<path d="M 1650,635 L 1650,348 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<path d="M 1650,348 L 1620,348 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<polygon points="1620 348, 1629.004 352.3497, 1629.004 343.6503" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,67%,70%); fill-rule: evenodd;"/>
+			<path d="M 1295,635 L 1135,635 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<path d="M 1135,635 L 1135,208 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<path d="M 1135,208 L 1290,208 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<polygon points="1290 208, 1280.996 203.6503, 1280.996 212.3497" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,67%,70%); fill-rule: evenodd;"/>
+			<rect x="1685" y="315" width="135" height="55" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="1716.9375" y="335.5" style="font-family: ArialBold; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,671) scale(1,-1)">HashMap</text>
+			<rect x="1830" y="315" width="135" height="55" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="1864.6015625" y="335.5" style="font-family: ArialBold; font-size: 16px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,671) scale(1,-1)">TreeMap</text>
+			<rect x="1685" y="180" width="155" height="55" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="1704.990234375" y="200.5" style="font-family: ArialBold; font-size: 15px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,401) scale(1,-1)">LinkedHashMap</text>
+			<rect x="1845" y="180" width="125" height="55" rx="10" ry="10" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(90%,92%,94%); fill-rule: evenodd;"/>
+			<text x="1871.6552734375" y="200.5" style="font-family: ArialBold; font-size: 15px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,401) scale(1,-1)">Hashtable</text>
+			<rect x="1902" y="225" width="66" height="23" rx="10" ry="10" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="1916.3203125" y="229.5" style="font-family: ArialBold; font-size: 12px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,459) scale(1,-1)">legacy</text>
+			<path d="M 1790,476 L 1752,370 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="1752 370, 1750.956 379.9454, 1759.125 377.017" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 1880,476 L 1897,370 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="1897 370, 1891.289 378.2089, 1899.857 379.5831" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 1752,315 L 1752,235 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="1752 235, 1747.661 244.0097, 1756.339 244.0097" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 1970,912 L 1990,912 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<path d="M 1990,912 L 1990,208 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<path d="M 1990,208 L 1970,208 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2.2; stroke-dasharray: 6, 4;"/>
+			<polygon points="1970 208, 1979.004 212.3497, 1979.004 203.6503" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,67%,70%); fill-rule: evenodd;"/>
+			<text x="60" y="80" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,160) scale(1,-1)">Синие стрелки: интерфейс extends интерфейс. Зелёные: наследование классов.</text>
+			<text x="60" y="47" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,94) scale(1,-1)">Серый пунктир: класс реализует контракт. Показаны основные связи; часть опущена. LinkedList показан дважды.</text>
+		</g>
+	</g>
+</svg>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1100" height="590" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 590" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1100" height="590"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-590)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1100" height="590" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,99%); fill-rule: evenodd;"/>
+			<rect x="32" y="530" width="6" height="30" rx="3" ry="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<text x="52" y="539" style="font-family: ArialBold; font-size: 25px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1078) scale(1,-1)">От размера коллекции к асимптотике</text>
+			<rect x="45" y="404" width="250" height="76" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="122.5859375" y="435.0" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,870) scale(1,-1)">Размер n</text>
+			<path d="M 305,442 L 390,442 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="390 442, 380.9903 437.6612, 380.9903 446.3388" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<rect x="400" y="404" width="300" height="76" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="446.353515625" y="435.0" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,870) scale(1,-1)">Действия T(n) = 3n + 5</text>
+			<path d="M 710,442 L 795,442 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="795 442, 785.9903 437.6612, 785.9903 446.3388" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<rect x="805" y="404" width="250" height="76" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="877.61279296875" y="435.0" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,870) scale(1,-1)">Рост: Θ(n)</text>
+			<text x="55" y="371" style="font-family: Arial; font-size: 18px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,742) scale(1,-1)">Учебная модель линейного поиска: не точный счёт инструкций Java.</text>
+			<path d="M 110,65 L 620,65 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="620 65, 610.9903 60.66116, 610.9903 69.33884" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,67%,70%); fill-rule: evenodd;"/>
+			<path d="M 110,65 L 110,320 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="110 320, 114.3388 310.9903, 105.6612 310.9903" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,67%,70%); fill-rule: evenodd;"/>
+			<text x="635" y="58" style="font-family: ArialBold; font-size: 18px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,116) scale(1,-1)">n</text>
+			<text x="61" y="320" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,640) scale(1,-1)">действия</text>
+			<path d="M 159,84.6 L 208,91.95 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 208,91.95 L 257,99.3 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 257,99.3 L 306,106.65 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 306,106.65 L 355,114 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 355,114 L 404,121.35 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 404,121.35 L 453,128.7 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 453,128.7 L 502,136.05 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 502,136.05 L 551,143.4 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 551,143.4 L 600,150.75 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 159,84.6 L 208,104.2 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 208,104.2 L 257,123.8 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 257,123.8 L 306,143.4 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 306,143.4 L 355,163 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 355,163 L 404,182.6 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 404,182.6 L 453,202.2 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 453,202.2 L 502,221.8 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 502,221.8 L 551,241.4 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 551,241.4 L 600,261 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 159,67.45 L 208,74.8 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 208,74.8 L 257,87.05 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 257,87.05 L 306,104.2 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 306,104.2 L 355,126.25 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 355,126.25 L 404,153.2 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 404,153.2 L 453,185.05 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 453,185.05 L 502,221.8 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 502,221.8 L 551,263.45 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 551,263.45 L 600,310 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<text x="505" y="162" style="font-family: ArialBold; font-size: 17px;fill: rgb(8%,34%,60%); stroke:none;" transform="translate(0,324) scale(1,-1)">T(n)</text>
+			<text x="535" y="225" style="font-family: ArialBold; font-size: 17px;fill: rgb(8%,60%,34%); stroke:none;" transform="translate(0,450) scale(1,-1)">8n</text>
+			<text x="525" y="305" style="font-family: ArialBold; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,610) scale(1,-1)">n²</text>
+			<text x="142.1103515625" y="38" style="font-family: Arial; font-size: 15px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,76) scale(1,-1)">n = 1</text>
+			<text x="578.939208984375" y="38" style="font-family: Arial; font-size: 15px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,76) scale(1,-1)">n = 10</text>
+			<rect x="685" y="207" width="365" height="105" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="707" y="278" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,556) scale(1,-1)">Большое O: верхняя граница</text>
+			<text x="707" y="240" style="font-family: Arial; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,480) scale(1,-1)">3n + 5 ≤ 8n при n ≥ 1</text>
+			<rect x="685" y="80" width="365" height="105" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="707" y="151" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,302) scale(1,-1)">Малое o: строго меньший рост</text>
+			<text x="707" y="113" style="font-family: Arial; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,226) scale(1,-1)">T(n) / n² → 0 при n → ∞</text>
+		</g>
+	</g>
+</svg>

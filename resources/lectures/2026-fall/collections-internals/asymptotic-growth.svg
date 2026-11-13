@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1100" height="590" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 590" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1100" height="590"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-590)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1100" height="590" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,99%); fill-rule: evenodd;"/>
+			<rect x="32" y="530" width="6" height="30" rx="3" ry="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<text x="52" y="539" style="font-family: ArialBold; font-size: 25px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1078) scale(1,-1)">Как растёт работа с коллекцией</text>
+			<text x="42" y="25" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,50) scale(1,-1)">Условное число шагов на одной шкале; это не замеры времени Java.</text>
+			<text x="55" y="465" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,930) scale(1,-1)">Увеличиваем число элементов n → смотрим, сколько действий понадобится.</text>
+			<path d="M 100,70 L 610,70 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="610 70, 600.9903 65.66116, 600.9903 74.33884" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,67%,70%); fill-rule: evenodd;"/>
+			<path d="M 100,70 L 100,360 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="100 360, 104.3388 350.9903, 95.66116 350.9903" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(61%,67%,70%); fill-rule: evenodd;"/>
+			<text x="615" y="63" style="font-family: ArialBold; font-size: 18px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,126) scale(1,-1)">n</text>
+			<text x="47" y="360" style="font-family: Arial; font-size: 16px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,720) scale(1,-1)">шаги</text>
+			<text x="95.828857421875" y="42" style="font-family: Arial; font-size: 15px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,84) scale(1,-1)">0</text>
+			<text x="515.828857421875" y="42" style="font-family: Arial; font-size: 15px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,84) scale(1,-1)">6</text>
+			<path d="M 100,77 L 170,77 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 170,77 L 240,77 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 240,77 L 310,77 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 310,77 L 380,77 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 380,77 L 450,77 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 450,77 L 520,77 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 100,70 L 170,77 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 170,77 L 240,84 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 240,84 L 310,91 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 310,91 L 380,98 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 380,98 L 450,105 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 450,105 L 520,112 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 100,70 L 170,77 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 170,77 L 240,98 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 240,98 L 310,133 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 310,133 L 380,182 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 380,182 L 450,245 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<path d="M 450,245 L 520,322 Z" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 3;"/>
+			<text x="552" y="94" style="font-family: ArialBold; font-size: 18px;fill: rgb(8%,34%,60%); stroke:none;" transform="translate(0,188) scale(1,-1)">1</text>
+			<text x="552" y="124" style="font-family: ArialBold; font-size: 18px;fill: rgb(8%,60%,34%); stroke:none;" transform="translate(0,248) scale(1,-1)">n</text>
+			<text x="552" y="318" style="font-family: ArialBold; font-size: 18px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,636) scale(1,-1)">n²</text>
+			<rect x="680" y="278" width="370" height="82" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="700" y="330" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,660) scale(1,-1)">O(1) · ArrayList.get(i)</text>
+			<text x="700" y="298" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,596) scale(1,-1)">модель: одна ячейка при любом n</text>
+			<rect x="680" y="173" width="370" height="82" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="700" y="225" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,450) scale(1,-1)">O(n) · ArrayList.contains(x)</text>
+			<text x="700" y="193" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,386) scale(1,-1)">худший случай: n → 2n сравнений</text>
+			<rect x="680" y="68" width="370" height="82" rx="10" ry="10" style="stroke: rgb(61%,67%,70%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="700" y="120" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,240) scale(1,-1)">O(n²) · n поисков в ArrayList</text>
+			<text x="700" y="88" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,176) scale(1,-1)">худший случай: n² → 4n² сравнений</text>
+		</g>
+	</g>
+</svg>

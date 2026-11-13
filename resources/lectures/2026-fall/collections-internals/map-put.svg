@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1100" height="450" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 450" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1100" height="450"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-450)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1100" height="450" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,99%); fill-rule: evenodd;"/>
+			<rect x="32" y="390" width="6" height="30" rx="3" ry="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<text x="52" y="399" style="font-family: ArialBold; font-size: 25px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,798) scale(1,-1)">Map.put: повторный ключ заменяет значение</text>
+			<text x="42" y="25" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,50) scale(1,-1)">Ключей остаётся два; Map не проверяет согласованность ID студента и ключа.</text>
+			<text x="75" y="315" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,630) scale(1,-1)">До put(2, Иван)</text>
+			<rect x="75" y="220" width="335" height="65" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="197.7978515625" y="245.5" style="font-family: Arial; font-size: 20px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,491) scale(1,-1)">1 → Иван</text>
+			<rect x="75" y="140" width="335" height="65" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="198.10546875" y="165.5" style="font-family: Arial; font-size: 20px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,331) scale(1,-1)">2 → Анна</text>
+			<path d="M 450,213 L 625,213 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="625 213, 615.9903 208.6612, 615.9903 217.3388" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<text x="770" y="315" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,630) scale(1,-1)">После</text>
+			<rect x="660" y="220" width="335" height="65" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="782.7978515625" y="245.5" style="font-family: Arial; font-size: 20px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,491) scale(1,-1)">1 → Иван</text>
+			<rect x="660" y="140" width="335" height="65" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="782.7978515625" y="165.5" style="font-family: Arial; font-size: 20px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,331) scale(1,-1)">2 → Иван</text>
+			<text x="368.935546875" y="80" style="font-family: ArialBold; font-size: 20px;fill: rgb(8%,60%,34%); stroke:none;" transform="translate(0,160) scale(1,-1)">size() = 2; put вернул прежнюю Анну</text>
+		</g>
+	</g>
+</svg>

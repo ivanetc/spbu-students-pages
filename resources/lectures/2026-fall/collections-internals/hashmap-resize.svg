@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1100" height="630" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 630" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1100" height="630"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-630)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1100" height="630" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,99%); fill-rule: evenodd;"/>
+			<rect x="32" y="570" width="6" height="30" rx="3" ry="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<text x="52" y="579" style="font-family: ArialBold; font-size: 25px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1158) scale(1,-1)">HashMap: расширение и перераспределение</text>
+			<text x="42" y="25" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,50) scale(1,-1)">Игрушечная модель: index = hash mod capacity; порог 3 при capacity 4.</text>
+			<text x="70" y="510" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1020) scale(1,-1)">До: 3 записи, capacity = 4</text>
+			<text x="610" y="510" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1020) scale(1,-1)">После put(3): 4 записи, capacity = 8</text>
+			<rect x="70" y="417" width="330" height="58" rx="10" ry="10" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="214.937744140625" y="439.0" style="font-family: Arial; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,878) scale(1,-1)">0: —</text>
+			<rect x="70" y="342" width="330" height="58" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="208.592041015625" y="364.0" style="font-family: Arial; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,728) scale(1,-1)">1: 1, 5</text>
+			<rect x="70" y="267" width="330" height="58" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="219.154296875" y="289.0" style="font-family: Arial; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,578) scale(1,-1)">2: 2</text>
+			<rect x="70" y="192" width="330" height="58" rx="10" ry="10" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="214.937744140625" y="214.0" style="font-family: Arial; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,428) scale(1,-1)">3: —</text>
+			<rect x="650" y="447" width="310" height="38" rx="10" ry="10" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="787.049560546875" y="459.0" style="font-family: Arial; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,918) scale(1,-1)">0: —</text>
+			<rect x="650" y="399" width="310" height="38" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="790.822265625" y="411.0" style="font-family: Arial; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,822) scale(1,-1)">1: 1</text>
+			<rect x="650" y="351" width="310" height="38" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="790.822265625" y="363.0" style="font-family: Arial; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,726) scale(1,-1)">2: 2</text>
+			<rect x="650" y="303" width="310" height="38" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="790.822265625" y="315.0" style="font-family: Arial; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,630) scale(1,-1)">3: 3</text>
+			<rect x="650" y="255" width="310" height="38" rx="10" ry="10" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="787.049560546875" y="267.0" style="font-family: Arial; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,534) scale(1,-1)">4: —</text>
+			<rect x="650" y="207" width="310" height="38" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="790.822265625" y="219.0" style="font-family: Arial; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,438) scale(1,-1)">5: 5</text>
+			<rect x="650" y="159" width="310" height="38" rx="10" ry="10" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="787.049560546875" y="171.0" style="font-family: Arial; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,342) scale(1,-1)">6: —</text>
+			<rect x="650" y="111" width="310" height="38" rx="10" ry="10" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(100%,100%,100%); fill-rule: evenodd;"/>
+			<text x="787.049560546875" y="123.0" style="font-family: Arial; font-size: 17px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,246) scale(1,-1)">7: —</text>
+			<path d="M 405,325 L 625,325 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="625 325, 615.9903 320.6612, 615.9903 329.3388" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<text x="429.32421875" y="350" style="font-family: ArialBold; font-size: 18px;fill: rgb(8%,60%,34%); stroke:none;" transform="translate(0,700) scale(1,-1)">O(m) за один resize</text>
+			<text x="70" y="60" style="font-family: Arial; font-size: 19px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,120) scale(1,-1)">Ключи 1 и 5 после роста попали в разные корзины; старые записи надо перенести.</text>
+		</g>
+	</g>
+</svg>

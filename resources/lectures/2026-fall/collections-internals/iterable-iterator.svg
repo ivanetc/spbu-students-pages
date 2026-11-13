@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1100" height="560" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 560" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1100" height="560"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-560)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1100" height="560" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,99%); fill-rule: evenodd;"/>
+			<rect x="32" y="500" width="6" height="30" rx="3" ry="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<text x="52" y="509" style="font-family: ArialBold; font-size: 25px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1018) scale(1,-1)">Iterable даёт Iterator для обхода</text>
+			<text x="42" y="25" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,50) scale(1,-1)">* remove() может не поддерживаться; Iterator не копирует коллекцию.</text>
+			<rect x="55" y="325" width="320" height="90" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="85.673828125" y="380" style="font-family: ArialBold; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,760) scale(1,-1)">registrations : List&lt;Student&gt;</text>
+			<text x="122.30517578125" y="350" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,700) scale(1,-1)">также Iterable&lt;Student&gt;</text>
+			<path d="M 380,370 L 510,370 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="510 370, 500.9903 365.6612, 500.9903 374.3388" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<text x="407.998046875" y="395" style="font-family: ArialBold; font-size: 18px;fill: rgb(8%,34%,60%); stroke:none;" transform="translate(0,790) scale(1,-1)">iterator()</text>
+			<rect x="525" y="325" width="350" height="90" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="612.48291015625" y="380" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,760) scale(1,-1)">Iterator&lt;Student&gt;</text>
+			<text x="589.01025390625" y="350" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,700) scale(1,-1)">hasNext() · next() · remove()*</text>
+			<text x="110" y="260" style="font-family: ArialBold; font-size: 20px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,520) scale(1,-1)">Последовательность элементов</text>
+			<rect x="110" y="155" width="245" height="75" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="207.73681640625" y="185.5" style="font-family: Arial; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,371) scale(1,-1)">Иван</text>
+			<rect x="390" y="155" width="245" height="75" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="488.059814453125" y="185.5" style="font-family: Arial; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,371) scale(1,-1)">Анна</text>
+			<rect x="670" y="155" width="245" height="75" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="767.73681640625" y="185.5" style="font-family: Arial; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,371) scale(1,-1)">Иван</text>
+			<path d="M 372,85 L 372,150 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="372 150, 376.3388 140.9903, 367.6612 140.9903" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<text x="197.31298828124997" y="55" style="font-family: ArialBold; font-size: 18px;fill: rgb(8%,60%,34%); stroke:none;" transform="translate(0,110) scale(1,-1)">позиция перед следующим элементом</text>
+		</g>
+	</g>
+</svg>

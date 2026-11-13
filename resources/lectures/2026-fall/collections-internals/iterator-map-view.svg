@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1100" height="480" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 480" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1100" height="480"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-480)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1100" height="480" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,99%); fill-rule: evenodd;"/>
+			<rect x="32" y="420" width="6" height="30" rx="3" ry="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<text x="52" y="429" style="font-family: ArialBold; font-size: 25px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,858) scale(1,-1)">Обход: курсор и представление Map</text>
+			<text x="42" y="25" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,50) scale(1,-1)">Итератор не копирует коллекцию; entrySet связан с исходной Map.</text>
+			<text x="80" y="350" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,700) scale(1,-1)">Iterator над List</text>
+			<rect x="80" y="247" width="175" height="68" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="145.09521484375" y="274.0" style="font-family: Arial; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,548) scale(1,-1)">Иван</text>
+			<rect x="280" y="247" width="175" height="68" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="345.387451171875" y="274.0" style="font-family: Arial; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,548) scale(1,-1)">Анна</text>
+			<rect x="480" y="247" width="175" height="68" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="545.09521484375" y="274.0" style="font-family: Arial; font-size: 19px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,548) scale(1,-1)">Иван</text>
+			<path d="M 280,205 L 280,245 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="280 245, 284.3388 235.9903, 275.6612 235.9903" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<text x="219.12255859375" y="170" style="font-family: ArialBold; font-size: 18px;fill: rgb(8%,60%,34%); stroke:none;" transform="translate(0,340) scale(1,-1)">next() → Анна</text>
+			<text x="125.377197265625" y="138" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,276) scale(1,-1)">remove() удалит последнюю выданную</text>
+			<text x="697.43115234375" y="350" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,700) scale(1,-1)">Map и её представление</text>
+			<rect x="690" y="248" width="260" height="62" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="722.0283203125" y="272.0" style="font-family: Arial; font-size: 18px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,544) scale(1,-1)">Map: 1→Иван, 2→Иван</text>
+			<path d="M 820,248 L 820,205 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="820 205, 815.6612 214.0097, 824.3388 214.0097" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<rect x="690" y="143" width="260" height="62" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<text x="754.134765625" y="167.0" style="font-family: Arial; font-size: 18px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,334) scale(1,-1)">entrySet(): пары</text>
+			<text x="698.115478515625" y="100" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,200) scale(1,-1)">Удаление связи видно в обоих</text>
+		</g>
+	</g>
+</svg>

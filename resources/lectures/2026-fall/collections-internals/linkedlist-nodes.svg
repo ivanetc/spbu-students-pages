@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1100" height="500" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 500" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1100" height="500"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-500)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1100" height="500" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,99%); fill-rule: evenodd;"/>
+			<rect x="32" y="440" width="6" height="30" rx="3" ry="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<text x="52" y="449" style="font-family: ArialBold; font-size: 25px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,898) scale(1,-1)">LinkedList: узлы и поиск позиции</text>
+			<text x="42" y="25" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,50) scale(1,-1)">Узлы могут лежать в разных местах памяти; линия показывает ссылку, не соседство адресов.</text>
+			<rect x="120" y="230" width="220" height="95" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<path d="M 178,325 L 178,230 Z" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 282,325 L 282,230 Z" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="203.816650390625" y="270" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,540) scale(1,-1)">Иван</text>
+			<text x="134.3828125" y="270" style="font-family: Arial; font-size: 14px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,540) scale(1,-1)">prev</text>
+			<text x="297.76904296875" y="270" style="font-family: Arial; font-size: 14px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,540) scale(1,-1)">next</text>
+			<rect x="440" y="230" width="220" height="95" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<path d="M 498,325 L 498,230 Z" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 602,325 L 602,230 Z" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="523.8935546875" y="270" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,540) scale(1,-1)">Анна</text>
+			<text x="454.3828125" y="270" style="font-family: Arial; font-size: 14px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,540) scale(1,-1)">prev</text>
+			<text x="617.76904296875" y="270" style="font-family: Arial; font-size: 14px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,540) scale(1,-1)">next</text>
+			<rect x="760" y="230" width="220" height="95" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<path d="M 818,325 L 818,230 Z" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 2;"/>
+			<path d="M 922,325 L 922,230 Z" style="stroke: rgb(90%,92%,94%); stroke-linecap: butt; stroke-width: 2;"/>
+			<text x="844.94970703125" y="270" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,540) scale(1,-1)">Олег</text>
+			<text x="774.3828125" y="270" style="font-family: Arial; font-size: 14px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,540) scale(1,-1)">prev</text>
+			<text x="937.76904296875" y="270" style="font-family: Arial; font-size: 14px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,540) scale(1,-1)">next</text>
+			<path d="M 230,388 L 230,327 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="230 327, 225.6612 336.0097, 234.3388 336.0097" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<text x="216.307861328125" y="405" style="font-family: Arial; font-size: 17px;fill: rgb(8%,34%,60%); stroke:none;" transform="translate(0,810) scale(1,-1)">first</text>
+			<path d="M 870,388 L 870,327 Z" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="870 327, 865.6612 336.0097, 874.3388 336.0097" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<text x="856.772705078125" y="405" style="font-family: Arial; font-size: 17px;fill: rgb(8%,34%,60%); stroke:none;" transform="translate(0,810) scale(1,-1)">last</text>
+			<path d="M 340,297 L 440,297 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="440 297, 430.9903 292.6612, 430.9903 301.3388" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 440,252 L 340,252 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="340 252, 349.0097 256.3388, 349.0097 247.6612" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 660,297 L 760,297 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="760 297, 750.9903 292.6612, 750.9903 301.3388" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<path d="M 760,252 L 660,252 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="660 252, 669.0097 256.3388, 669.0097 247.6612" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<text x="90" y="150" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,300) scale(1,-1)">get(i): переходы от ближайшего конца → до O(n)</text>
+			<text x="90" y="104" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,208) scale(1,-1)">Вставка у найденного узла: меняем несколько ссылок → O(1)</text>
+			<text x="90" y="58" style="font-family: ArialBold; font-size: 21px;fill: rgb(8%,60%,34%); stroke:none;" transform="translate(0,116) scale(1,-1)">add(i, e) в середине: сначала ищем узел → O(n) целиком</text>
+		</g>
+	</g>
+</svg>

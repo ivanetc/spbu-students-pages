@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="1100" height="570" preserveAspectRatio="xMinYMin meet" viewBox="0 0 1100 570" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="1100" height="570"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-570)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="0" y="0" width="1100" height="570" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(98%,98%,99%); fill-rule: evenodd;"/>
+			<rect x="32" y="510" width="6" height="30" rx="3" ry="3" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,34%,60%); fill-rule: evenodd;"/>
+			<text x="52" y="519" style="font-family: ArialBold; font-size: 25px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,1038) scale(1,-1)">Map: ключ ведёт к значению</text>
+			<text x="42" y="25" style="font-family: Arial; font-size: 17px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,50) scale(1,-1)">Здесь показаны связи, а не корзины HashMap или расположение объектов в памяти.</text>
+			<text x="188.489501953125" y="440" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,880) scale(1,-1)">Ключи: ID</text>
+			<text x="690.10205078125" y="440" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,880) scale(1,-1)">Значения: карточки Student</text>
+			<rect x="95" y="305" width="290" height="95" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="217.9921875" y="345.5" style="font-family: ArialBold; font-size: 24px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,691) scale(1,-1)">ID 1</text>
+			<path d="M 390,353 L 600,353 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="600 353, 590.9903 348.6612, 590.9903 357.3388" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<rect x="610" y="305" width="420" height="95" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<circle cx="660" cy="353" r="29" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<text x="651.734375" y="345" style="font-family: ArialBold; font-size: 23px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,690) scale(1,-1)">И</text>
+			<text x="808.816650390625" y="345" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,690) scale(1,-1)">Иван</text>
+			<rect x="95" y="165" width="290" height="95" rx="10" ry="10" style="stroke: rgb(8%,34%,60%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(92%,96%,98%); fill-rule: evenodd;"/>
+			<text x="217.9921875" y="205.5" style="font-family: ArialBold; font-size: 24px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,411) scale(1,-1)">ID 2</text>
+			<path d="M 390,213 L 600,213 Z" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 3;"/>
+			<polygon points="600 213, 590.9903 208.6612, 590.9903 217.3388" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<rect x="610" y="165" width="420" height="95" rx="10" ry="10" style="stroke: rgb(8%,60%,34%); stroke-linecap: butt; stroke-width: 1.7; fill: rgb(93%,97%,95%); fill-rule: evenodd;"/>
+			<circle cx="660" cy="213" r="29" style="stroke: none; stroke-linecap: butt; stroke-width: 1; fill: rgb(8%,60%,34%); fill-rule: evenodd;"/>
+			<text x="651.695068359375" y="205" style="font-family: ArialBold; font-size: 23px;fill: rgb(100%,100%,100%); stroke:none;" transform="translate(0,410) scale(1,-1)">А</text>
+			<text x="808.8935546875" y="205" style="font-family: ArialBold; font-size: 21px;fill: rgb(14%,19%,23%); stroke:none;" transform="translate(0,410) scale(1,-1)">Анна</text>
+			<text x="90" y="95" style="font-family: Arial; font-size: 19px;fill: rgb(36%,41%,45%); stroke:none;" transform="translate(0,190) scale(1,-1)">У каждого ключа одно текущее значение; разные ключи могут ссылаться на одно значение.</text>
+		</g>
+	</g>
+</svg>
